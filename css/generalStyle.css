@@ -1,0 +1,377 @@
+			/**
+			* generalStyle.css
+			* The general style for the site
+			* p2.bluerskies.biz
+			**/
+
+			article {
+				margin-left: 260px;
+			}
+
+			body {
+				margin-top:	20px;
+				margin-left: 20px;
+				//background-image: url("/css/lblue157.gif");
+				background-color: #FFFFFF;
+				//background-repeat: repeat;
+			}
+
+			h1 {
+				position: absolute;
+				top: 200px;
+				left: 200px;
+				color: #000099;
+				width:450px;
+				text-align: center;
+				font-family: cursive;
+			}
+
+			h2 {
+				position: absolute;
+				top: 180px;
+				left: 340px;
+				font-family: 'Helvetica Neue', helvetica, 'microsoft sans serif', arial, sans-serif;
+			  	font-size: 120%;
+			  	color: #3333FF;
+			}
+
+			p {
+				color: #000033;
+				margin-left:auto;
+				margin-right:auto;
+				text-align: justify;
+				font-family: arial;
+				width:75%;
+			}
+
+			footer {
+				position: absolute;
+				top: 730px;
+				left: 20px;
+			}
+
+			form {
+				position: absolute;
+				top: 60px;
+				left: 230px;
+				border: 10px ridge #660066;
+				margin-top: 200px;
+				margin-bottom: 25px;
+				padding-left: 10px;
+				padding-right: 10px;
+				text-align: center;	
+			}
+
+			ol {
+				margin-top: 15px;
+				margin-bottom: 15px;
+				margin-left: 20%;
+				margin-right: 15%;
+				text-align: justify;
+				font-family: arial;
+			}
+
+			ul {
+				padding-left:40%;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				font-family: arial;
+			}
+
+			#banner_bluerskies {
+				position: absolute;
+				top: 20px;
+				left: 460px;
+				color: #0000FF;
+				font-size: 36px;
+				font-style: bold;
+			}
+
+			#banner_photo {
+				position: absolute;
+				margin-top: 35px;
+				margin-bottom: 35px;
+			}
+
+			#comment_box_right {
+				position: absolute;
+				top: 340px;
+				left: 615px;
+				font-size: 90%;
+				color: #000099;
+				border: 10px ridge #003399;
+				width: 150px;
+				padding-left: 10px;
+				padding-right: 10px;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				font-family: cursive;
+				text-align: center;	
+				background-color: #EEEEFF;
+			}
+
+			#description {
+				position: absolute;
+				top: 240px;
+				left: 230px;
+				width: 380px;
+				text-align: center;
+				font-family: arial;
+				color: #000066;
+			}
+
+			#domain {
+				margin-left:auto;
+				margin-right:auto;
+				width:250px;
+				padding:10px;
+				border:5px solid blue;
+				text-align: center;U
+				}
+
+			#form_profile {
+				position: absolute;
+				top: 90px;
+				left: 250px;
+				border: 10px ridge #660066;
+				margin-top: 200px;
+				margin-bottom: 25px;
+				padding-left: 10px;
+				padding-right: 10px;
+				text-align: center;					
+			}
+
+			#friends_list {
+				color: black;
+				margin-left: 260px;
+			}
+			#login_status {
+				position: absolute;
+				top: 180px;
+				left: 660px;
+			}
+
+			#menu ul {
+				padding-left:40%;
+				padding-top: 50px;
+				padding-bottom: 50px;
+			}
+
+			#menu li {
+				list-style-type: none;
+				padding-left:40%;
+				padding-left:40%;
+				width: 10em;
+				text-align: center;
+			}
+
+			#menu a {
+				text-decoration: none;
+				font-family: arial;
+				color: #FFFFFF;
+				display: block;
+				border: 8px blue outset;
+				background-color: #3333FF;
+				width: 5em;
+				float: left;
+				text-align: center;
+			}
+
+			#menu a:hover {
+				border: 8px green inset;
+			}
+
+			#menu_page {
+				border: 8px blue inset;
+				text-align: center;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				margin-left: 20%;
+				margin-right: 20%;
+				padding-top: 50px;
+				padding-left: 10px;
+				padding-bottom: 100px;
+				padding-right: 10px;
+			}
+
+			#menu_page ul {
+				padding-left:10%;
+				float: left;
+				margin-top: 20px;
+			}
+
+			#menu_page li {
+				list-style-type: none;
+				width: 10em;
+				text-align: center;
+				float: left;
+			}
+
+			#menu_page a {
+				text-decoration: none;
+				font-family: arial;
+				color: #000033;
+				display: block;
+				border: 8px blue outset;
+				background-color: #DDDDFF;
+				float: left;
+			}
+
+			#menu_page a:hover {
+				border: 8px green inset;
+			}
+
+			#menu_side {
+				position: absolute;
+    			top: 340px;
+    			left: 50px;
+				border: 8px solid #3333FF;
+				padding-left: 10px;
+				padding-right: 10px;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				width: 130px;
+			}
+			#menu_side ul {
+			  display: block;
+			  list-style: none;
+			  margin: 0;
+			  padding: 0;
+			}
+			#menu_side ul li {
+			  display: block;
+			  float: left;
+			  width: 100%;
+			  margin: 10;
+			  padding: 10;
+			  background: transparent url(/css/bg-bubplastic-button.gif) top left no-repeat;
+			}
+			#menu_side ul li a {
+			  display: block;
+			  margin: 10;
+			  width: 90%;
+			  padding-left: 10px;
+			  padding-top: 5px;
+			  padding-bottom: 5px;
+			  text-transform: uppercase;
+			  font-family: 'Helvetica Neue', helvetica, 'microsoft sans serif', arial, sans-serif;
+			  font-size: 90%;
+			  color: #FFFFFF;
+			  text-decoration: none;
+			  background: transparent url(/css/bg-bubplastic-button.gif) top left no-repeat;
+			}
+			#menu_side ul li a span {
+			  display: block;
+			  margin: 0;
+			  width: 100%;
+			  height: 35px;
+			  padding-top: 5px;
+			  padding-right: 35px;
+			  background: transparent url(/css/bg-bubplastic-button.gif) top right no-repeat;
+			  cursor: pointer;
+			}
+			#menu_side ul li a:hover,
+			#menu_side ul li.active a {
+			  background: transparent url(/css/bg-bubplastic-h-blue.gif) top left no-repeat;
+			}
+			#menu_side ul li a:hover span,
+			#menu_side ul li.active a span {
+			  background: transparent url(/css/bg-bubplastic-h-blue.gif) top right no-repeat;
+			}
+			#menu_side_header {
+				font-family: 'Helvetica Neue', helvetica, 'microsoft sans serif', arial, sans-serif;
+			  	font-size: 120%;
+			  	color: #3333FF;
+			}
+
+			#notes {
+				font-size: small;
+				text-align: center;
+				margin-top: 45px;
+				margin-bottom: 20px;
+			}
+
+			#post_content {
+				font-size: 90%;
+				color: #000099;
+				border: 2px dotted;
+				border-color: #003399;
+				padding-left: 10px;
+				padding-right: 10px;
+				max-width: 150px;
+				font-family: cursive;
+				text-align: center;	
+				background-color: #EEEEFF;	
+			}
+
+			#menu_horizontal ul {
+				margin-left: 120px;				
+				margin-top: 200px;
+				float:left;
+				width:100%;
+				padding:0;
+				margin:0;
+				list-style-type:none;
+			}
+			#menu_horizontal a {
+				margin-left: 120px;	
+				margin-top: 200px;
+				height:40px;
+				width:60px;
+				float:left;
+				width:6em;
+				text-decoration:none;
+				text-align:center;
+				color:white;
+				background-color:purple;
+				padding:0.2em 0.6em;
+				border-right:1px solid white;
+			}
+			#menu_horizontal a:hover {background-color:#3333FF;}
+			#menu_horizontal li {display:inline;}
+			}
+
+			#post_table_name {
+				font:italic bold 12px/30px Georgia, serif;
+				color: #3333FF;
+				padding-top: 25px;
+				padding-bottom: 10px;	
+			}
+
+			#profile {
+				position: absolute;
+				border: 10px ridge #000099;
+				top: 350px;
+				left: 300px;
+				padding-left: 20px;
+				padding-right: 20px;
+				padding-bottom: 15px;
+				font-family: cursive;	
+			}
+
+			#record {
+			 	font-color: navy;
+			 	font-size: small;
+			 	margin-left: auto;
+			 	margin-right: auto;
+			 	width: 80%;
+			 	background-color: #FFFF66;
+ 			}
+
+			#special_features {
+				position: absolute;
+				top: 150px;
+				left: 300px;
+				width: 470px;
+				font-size: 90%;
+				color: #000099;
+				border: 10px ridge #003399;
+				margin-top: 200px;
+				padding-left: 10px;
+				padding-right: 10px;
+				padding-top: 15px;
+				padding-bottom: 15px;
+				font-family: cursive;
+				text-align: center;	
+				background-color: #EEEEFF;	
+			}
