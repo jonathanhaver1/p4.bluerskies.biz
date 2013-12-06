@@ -11,9 +11,9 @@
 			body {
 				margin-top:	20px;
 				margin-left: 20px;
-				//background-image: url("/css/lblue157.gif");
-				background-color: #FFFFFF;
-				//background-repeat: repeat;
+				background-image: url("/css/ricepaper_v3");
+				//background-color: #FFFFFF;
+				background-repeat: repeat;
 			}
 
 			h1 {
@@ -50,17 +50,7 @@
 				left: 20px;
 			}
 
-			form {
-				position: absolute;
-				top: 60px;
-				left: 230px;
-				border: 10px ridge #660066;
-				margin-top: 200px;
-				margin-bottom: 25px;
-				padding-left: 10px;
-				padding-right: 10px;
-				text-align: center;	
-			}
+
 
 			ol {
 				margin-top: 15px;
@@ -225,12 +215,12 @@
 				position: absolute;
     			top: 340px;
     			left: 50px;
-				border: 8px solid #3333FF;
+				border: 8px solid brown;
 				padding-left: 10px;
 				padding-right: 10px;
 				padding-top: 20px;
 				padding-bottom: 20px;
-				width: 130px;
+				width: 170px;
 			}
 			#menu_side ul {
 			  display: block;
@@ -374,4 +364,48 @@
 				font-family: cursive;
 				text-align: center;	
 				background-color: #EEEEFF;	
+			}
+
+
+
+			#domain {
+				margin-left:auto;
+				margin-right:auto;
+				width:250px;
+				padding:10px;
+				border:5px solid blue;
+				text-align: center;
+				}
+
+			 #record {
+			 	font-color: navy;
+			 	font-size: small;
+			 	margin-left: auto;
+			 	margin-right: auto;
+			 	width: 80%;
+			 	background-color: #FFFF66;
+			 }
+
+			 #form_communicationtest {
+				position: absolute;
+				top: 60px;
+				left: 230px;
+				border: 10px ridge #660066;
+				margin-top: 200px;
+				margin-bottom: 25px;
+				padding-left: 10px;
+				padding-right: 10px;
+				text-align: center;	
+			}
+
+			#form_general {
+				position: absolute;
+				top: 60px;
+				left: 230px;
+				border: 10px ridge #660066;
+				margin-top: 200px;
+				margin-bottom: 25px;
+				padding-left: 10px;
+				padding-right: 10px;
+				text-align: center;	
 			}

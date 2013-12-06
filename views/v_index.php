@@ -12,14 +12,15 @@
 <body>
 
 	<div id="special_features">
-		<h1>Contacts to Do</h1>
-		<br><br>
-		Here you can<br>
-		- store an electronic communication address book<br>
-		- store a to do list<br>
-		- check on electronic addresses<br>
-		- contact people<br>
-
+		<br>
+		Keep your communication agenda always up to date<br>
+		and access it from EVERYWHERE
+		<ul>
+			<li>Keep and maintain your ADDRESS BOOK</li>
+			<li>Put together and check off a TO DO list</li>
+			<li>Use email and mobile text messaging</li>
+			<li>Test communication channels</li>
+		</ul>
 	</div>
 	<br>
 	<br>

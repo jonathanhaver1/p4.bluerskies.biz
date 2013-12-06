@@ -1,19 +1,21 @@
-<h2>Add a New Post</h2>
+<h2>Add a To Do</h2>
 
-<form style = 'position: absolute; left: 100px' id = "form_profile" method='POST' action='/posts/p_add'>
 
-    <span style='align:center'>
+<form style = 'position: absolute; left: 100px' id = "form_profile" method='POST' action='/todo/p_add/<?=$addressbook_id?>'>
 
-    <label for='content'>My new post:</label><br>
+    <span style='align:center'><br>
 
-        <textarea name='content' id='content' type='text' rows='6' cols='45'></textarea>
-    <br><br>
+    <label for='topic'>What would you like to do (in 120 characters or less)?</label><br><br>
 
-        <br>
+        <textarea name='topic' id='topic' type='text' rows='6' cols='45' max-length='120'></textarea><br><br>
+
+    <label for='priority'>What priority do you want to attach to it?<br>
+        1 = very low  o=====o  10 = very high</label><br><br>
+    <input name='priority' id='priority' type='number' max='10'></input><br><br>
 
     </span>
     
-    <input type='submit' value='Create Profile'>
+    <input type='submit' value='Do This'>
 
     <br><br>
 
@@ -22,16 +24,16 @@
 
 
 <div id="comment_box_right">
-    Write your post in this box and click 'Add Post' when you are done.<br>
-    Other memebers can read your posts and forward them to their friends.
+    Write your to do in this box and click 'Do This' when you are done.<br>
+    You can always change the priority later in the To Do Index.
 </div>
 
 <br><br>
 
-<div id="menu_horizontal" style = "position: absolute; top: 500px;">
+<div id="menu_horizontal" style = "position: absolute; top: 630px;">
         <ul>
-            <li><a href="/posts/index">View<br>Posts</a></li>
-            <li><a href="/posts/users">Follow<br>Users</a></li>
-            <li><a href="/profiles/find_profile">Vew<br>Profiles</a></li>
+            <li><a href="/addressbook/add">Add<br>Contact</a></li>
+            <li><a href="/todo/index_todo">Index<br>TO DO</a></li>
+            <li><a href="/todo/index_done">Index<br>DONE</a></li>
         </ul>
 </div> 

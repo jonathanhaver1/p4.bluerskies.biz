@@ -10,7 +10,7 @@
 
 <?php foreach($addressbook as $contact): ?>
 
-    <div id ="addressbook_list">
+    <article>
 
         <span id="post_table_name"><?=$contact['first_name']?> <?=$contact['last_name']?></span><br>
 
@@ -19,11 +19,16 @@
                 <?=Time::display($contact['modified'])?>
         </time><br>
 
-        <span id="post_content"><a href='/communicationtest/email/<?=$contact['addressbook_id']?>'>Verify Email Address</a></span>
+        <span id="post_content"><a href='/communicationtest/testEmail/<?=$contact['addressbook_id']?>'>Verify Email Address</a></span><br>
+        <span id="post_content"><a href='/communicationtest/testDomain/<?=$contact['addressbook_id']?>'>Verify Domain</a></span><br>
+        <span id="post_content"><a href='/communicate/sendEmail/<?=$contact['addressbook_id']?>'>Send Email</a></span><br>
+        <span id="post_content"><a href='/communicate/sendSMS/<?=$contact['addressbook_id']?>'>Send Mobile Text Message</a></span><br><br>
+        <span id="post_content"><a href='/todo/add/<?=$contact['addressbook_id']?>'>Add a To Do</a></span>
+
 
         <br><br>
 
-    </div>
+    </article>
 
 <?php endforeach; ?>
 
