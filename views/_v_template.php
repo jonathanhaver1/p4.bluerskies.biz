@@ -7,7 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="/css/generalStyle.css">
 	
 			<!-- include jsquery for the side menu -->
-		<script src="/js/jquery-1.10.2.min.js"></script> 
+		<script src="/js/jquery-1.10.2.min.js"></script>
+		<script src="/js/CommunicationTester.js"></script>
 	    	<script> 
 	    		$(function(){
 	      			$("#includeSideMenu").load("/libraries/menu_side.html"); 
@@ -27,7 +28,7 @@
 
 		<div id='banner_photo'>
 			<br>
-			<img src="/css/bluerskies.jpg" alt="Bluer Skies" width="800" height="100"><br>
+			<img src="/css/bluerskies.jpg" alt="Bluer Skies" width="160" height="40"><br>
 		</div>
 
 	<div id ='menu'>

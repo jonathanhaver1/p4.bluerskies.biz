@@ -1,8 +1,8 @@
-<h2>To Dos</h2>
+<h2>DONEs</h2>
 
 <div id ="description">
-    This is a list of people you need to contact.<br>
-    Set up new TO DOs in the menu below left.
+    This is a list of the people you have already contacted.<br>
+    Well done!
 </div>
 
 <br><br><br><br><br><br><br>
@@ -24,9 +24,9 @@
 
         <span id="todo_topic"><?=$todo['topic']?></span><br><br>
 
-        --><a href="/todo/done/<?=$todo['todo_id']?>">I have done it</a><br>
-        --><a href="/todo/priority_increase/<?=$todo['todo_id']?>">Increase Priority by 1</a><br>
-        --><a href="/todo/priority_decrease/<?=$todo['todo_id']?>">Decrease Priority by 1</a><br>
+        --><a href="/todo/not_done/<?=$todo['todo_id']?>">I have not really done it</a><br>
+        <span style ="font-size: small">To change the PRIORITY you have to select this option</span><br>
+
 
         ________________________________________<br><br>
 

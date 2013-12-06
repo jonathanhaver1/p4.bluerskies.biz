@@ -6,6 +6,8 @@
 //-------------------------------------------------------------------------------------
 //----------------------- EMAIL SYNTAX AND CHARACTER CHECK ----------------------------
 
+// check the syntax of an email address
+
 function checkCharactersEmailAddress (emailAddress) {
 
     characterTest = /^[\w!#$%&\'*+\-\/=?^`{|}~]+(\.[\w!#$%&\'*+\-\/=?^`{|}~]+)*@[a-z\d]([a-z\d-]*[a-z\d])?(\.[a-z\d]([a-z\d-]*[a-z\d])?)*\.[a-z]{2,6}$/i
@@ -22,6 +24,8 @@ function checkCharactersEmailAddress (emailAddress) {
 
     }
 }
+
+// check the syntax of an email address, the MX record, and return the domain
 
 function checkSyntax(){
 
@@ -48,6 +52,31 @@ function checkSyntax(){
     mx_lookup (emailDomain)
 
   }
+}
+
+  function mail_check(emailAddress) {
+
+    var email = document.emailForm.emailAddress
+    var emailString = email.value
+
+
+  if (email.value == null) {
+
+    alert ("No email address entered")
+    return false
+
+  } else if (checkCharactersEmailAddress(email.value) == false) {
+
+    alert ("This email address is not valid")
+    return false
+
+  } else {
+
+    alert ("This email address is valid")
+    return true
+
+  }
+
 }
 
 //-------------------------------------------------------------------------------------

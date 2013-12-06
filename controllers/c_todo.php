@@ -47,6 +47,27 @@ class todo_controller extends base_controller {
 		echo $this->template;
 	}
 
+	public function done($todo_id = null) {
+
+		# update the database
+		$data = Array("done" => "1");
+		DB::instance(DB_NAME)->update("todo", $data, "WHERE todo_id = '".$todo_id."'");
+
+		# Send them back
+		Router::redirect("/todo/index_todo");
+	}
+
+		public function not_done($todo_id = null) {
+
+		# update the database
+		$data = Array("done" => "0");
+		DB::instance(DB_NAME)->update("todo", $data, "WHERE todo_id = '".$todo_id."'");
+
+		# Send them back
+		Router::redirect("/todo/index_done");
+	}
+
+
 	public function index_todo() {
 
 		# if not logged in -> redirect to the login page
@@ -94,7 +115,7 @@ class todo_controller extends base_controller {
 		$this->template->title   = "TO DOs";
 
     	# Query the database for post information
-    	$q = '	SELECT 
+    	$q = "	SELECT 
 		            todo.todo_id,
 		            todo.user_id,
 		            todo.topic,
@@ -106,9 +127,9 @@ class todo_controller extends base_controller {
 		            addressbook.last_name
 		        FROM todo
 		        INNER JOIN addressbook
-		            ON todo.contact_id = addressbook.addressbook_id
-		        WHERE todo.done = true
-		        AND todo.user_id = '.$this->user->user_id;
+		            ON todo.addressbook_id = todo.addressbook_id
+		        WHERE todo.done = '1'
+		        AND todo.user_id = ".$this->user->user_id;
 
 		$todos = DB::instance(DB_NAME)->select_rows($q);
 
@@ -117,11 +138,9 @@ class todo_controller extends base_controller {
 		echo $this->template;
 	}
 
-	
-
 		public function priority_increase ($todo_id = null) {
 
-		# get current likes information from database
+		# get current priority information from database
    		$q = 'SELECT 
             	priority
         		FROM todo
@@ -141,7 +160,7 @@ class todo_controller extends base_controller {
 
 		public function priority_decrease ($todo_id = null) {
 
-		# get current likes information from database
+		# get current priority information from database
    		$q = 'SELECT 
             	priority
         		FROM todo

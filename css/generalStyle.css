@@ -70,8 +70,8 @@
 
 			#banner_bluerskies {
 				position: absolute;
-				top: 20px;
-				left: 460px;
+				top: 70px;
+				left: 240px;
 				color: #0000FF;
 				font-size: 36px;
 				font-style: bold;
@@ -79,7 +79,8 @@
 
 			#banner_photo {
 				position: absolute;
-				margin-top: 35px;
+				top: 100px;
+				left: 330px;
 				margin-bottom: 35px;
 			}
 

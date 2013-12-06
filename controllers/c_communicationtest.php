@@ -26,7 +26,7 @@ class communicationtest_controller extends base_controller {
 		echo $this->template;
 	}
 
-		public function sms_test() {
+	public function sms_test() {
 
 		# if not logged in -> redirect to the login page
 		if (!$this->user) {

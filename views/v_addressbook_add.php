@@ -22,7 +22,8 @@
     <textarea name='last_name' id='last_name' type='text' size='30'></textarea><br><br>
 
     <label for='email'>Email Address:</label><br>
-    <textarea name='email' id='email' type='text' size='30'></textarea><br><br>
+    <textarea name='email' id='email' type='text' size='30'></textarea><br>
+    <span style = "color: maroon; font-size: small; font-type: bold">This address will be verified.</span><br><br>
 
     <label for='mobilePhoneNumber'>Mobile Phone Number:</label><br>
     <textarea name='mobilePhoneNumber' id='mobilePhoneNumber' type='number' size='10'></textarea><br><br>

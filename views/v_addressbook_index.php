@@ -18,13 +18,20 @@
         <time datetime="<?=Time::display($contact['modified'],'Y-m-d G:i')?>">
                 <?=Time::display($contact['modified'])?>
         </time><br>
+        Mobile Phone: <?=$contact['mobilePhoneNumber']?><br>
+        Email: <?=$contact['email']?><br><br>
 
-        <span id="post_content"><a href='/communicationtest/testEmail/<?=$contact['addressbook_id']?>'>Verify Email Address</a></span><br>
-        <span id="post_content"><a href='/communicationtest/testDomain/<?=$contact['addressbook_id']?>'>Verify Domain</a></span><br>
-        <span id="post_content"><a href='/communicate/sendEmail/<?=$contact['addressbook_id']?>'>Send Email</a></span><br>
-        <span id="post_content"><a href='/communicate/sendSMS/<?=$contact['addressbook_id']?>'>Send Mobile Text Message</a></span><br><br>
-        <span id="post_content"><a href='/todo/add/<?=$contact['addressbook_id']?>'>Add a To Do</a></span>
+        <form>
 
+            <input type = "radio" name="email_check" onclick="mail_check(<?=$contact['email']?>)" value="check email">Check Email</input><br>
+            <input type = "radio" name="records" onclick="check_email(<?=$contact['email']?>)" value="check email">Check Email</input><br>
+            <br>
+
+        </form>
+
+            <span id="post_content"><a href='/communicate/sendEmail/<?=$contact['addressbook_id']?>'>Send Email</a></span><br>
+            <span id="post_content"><a href='/communicate/sendSMS/<?=$contact['addressbook_id']?>'>Send Mobile Text Message</a></span><br><br>
+            <span id="post_content"><a href='/todo/add/<?=$contact['addressbook_id']?>'>Add a To Do</a></span>
 
         <br><br>
 

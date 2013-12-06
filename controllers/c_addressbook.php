@@ -37,6 +37,7 @@ class addressbook_controller extends base_controller {
 		$_POST['created']  = Time::now();
 		$_POST['modified'] = Time::now();
 
+		if (check_email($POST_['email'])) {
 		# Insert
 		# Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
 		DB::instance(DB_NAME)->insert('addressbook', $_POST);
@@ -47,6 +48,7 @@ class addressbook_controller extends base_controller {
 			$this->template->content = View::instance('v_addressbook_added_successfully');
 			$this->template->title = "Success";
 			echo $this->template;
+		}
 	}
 
 	public function index() {
@@ -66,6 +68,8 @@ class addressbook_controller extends base_controller {
     			addressbook.addressbook_id,
             	addressbook.first_name,
             	addressbook.last_name,
+            	addressbook.email,
+            	addressbook.mobilePhoneNumber,
             	addressbook.modified
         		FROM addressbook
         		WHERE addressbook.user_id = '.$this->user->user_id;
