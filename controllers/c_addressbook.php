@@ -68,7 +68,11 @@ class addressbook_controller extends base_controller {
     			addressbook.addressbook_id,
             	addressbook.first_name,
             	addressbook.last_name,
-            	addressbook.email,
+            	addressbook.emailHome,
+            	addressbook.emailWork,
+            	addressbook.phoneNumberWork,
+            	addressbook.phoneNumberHome,
+            	addressbook.skype,
             	addressbook.mobilePhoneNumber,
             	addressbook.modified
         		FROM addressbook

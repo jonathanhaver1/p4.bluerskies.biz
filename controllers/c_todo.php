@@ -87,9 +87,15 @@ class todo_controller extends base_controller {
 		            todo.created,
 		            todo.priority,
 		            todo.done,
-		            addressbook.addressbook_id AS adress_id,
+		            addressbook.addressbook_id AS address_id,
 		            addressbook.first_name,
-		            addressbook.last_name
+		            addressbook.last_name,
+		            addressbook.emailHome,
+		            addressbook.emailWork,
+		            addressbook.skype,
+		            addressbook.phoneNumberWork,
+		            addressbook.mobilePhoneNumber,
+		            addressbook.phoneNumberHome
 		        FROM todo
 		        JOIN addressbook ON
 		        	addressbook.addressbook_id = todo.addressbook_id

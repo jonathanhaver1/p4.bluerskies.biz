@@ -16,20 +16,20 @@
 
         on the list since: 
         <time datetime="<?=Time::display($contact['modified'],'Y-m-d G:i')?>">
-                <?=Time::display($contact['modified'])?>
+                <?=Time::display($contact['modified'])?><br>
         </time><br>
-        Mobile Phone: <?=$contact['mobilePhoneNumber']?><br>
-        Email: <?=$contact['email']?><br><br>
-
         <form>
+            Work Email: <?=$contact['emailWork']?><br>
+            <input type = "radio" name="records" onclick="check_email(<?=$contact['emailWork']?>)" value="check email">Check Email Records</input><br>
+            Home Email: <?=$contact['emailHome']?><br>
+            <input type = "radio" name="records" onclick="check_email(<?=$contact['emailHome']?>)" value="check email">Check Email Records</input><br>
+            Work Phone: <?=$contact['phoneNumberWork']?><br>
+            Home Phone: <?=$contact['phoneNumberHome']?><br>
+            Mobile Phone: <?=$contact['mobilePhoneNumber']?><br>
+        </form><br>
 
-            <input type = "radio" name="email_check" onclick="mail_check(<?=$contact['email']?>)" value="check email">Check Email</input><br>
-            <input type = "radio" name="records" onclick="check_email(<?=$contact['email']?>)" value="check email">Check Email</input><br>
-            <br>
-
-        </form>
-
-            <span id="post_content"><a href='/communicate/sendEmail/<?=$contact['addressbook_id']?>'>Send Email</a></span><br>
+            <span id="post_content"><a href='/communicate/sendEmail/<?=$contact['addressbook_id']?>'>Send Work Email</a></span><br>
+            <span id="post_content"><a href='/communicate/sendEmail/<?=$contact['addressbook_id']?>'>Send Private Email</a></span><br>
             <span id="post_content"><a href='/communicate/sendSMS/<?=$contact['addressbook_id']?>'>Send Mobile Text Message</a></span><br><br>
             <span id="post_content"><a href='/todo/add/<?=$contact['addressbook_id']?>'>Add a To Do</a></span>
 
@@ -39,10 +39,8 @@
 
 <?php endforeach; ?>
 
-        <!-- main menu on left side !-->
-        <div id="includeSideMenu"></div>
-
-
+<!-- main menu on left side !-->
+<div id="includeSideMenu"></div>
 
 <div id = "comment_box_right">
     This is your addressbook. You have to add someone as a contact before you can add a TODO.

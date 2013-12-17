@@ -1,40 +1,62 @@
-	public function email_invitation($friend_id = null) {
+<?php
 
-		# Build the query
-   		# Query
-    	$q = 'SELECT 
-            	first_name,
-            	last_name,
-            	email
-        		FROM friends
-                WHERE friend_id = '.$friend_id;
+class communicate_controller extends base_controller {
 
-		# Run the query
-		$friend = DB::instance(DB_NAME)->select_row($q);
+	public function _construct() {
+		parent::_construct();
 
-		# Build a multi-dimension array of recipients of this email
-		$to[] = Array("name" => $friend['first_name']." ".$friend['last_name'], "email" => $friend['last_name']);
+		# if not logged in -> redirect to the login page
+		if (!$this->user) {
+			Router::redirect('/users/login');
+		}
+	}
 
-		# Build a single-dimension array of who this email is coming from
-		# note it's using the constants we set in the configuration above)
-		$from = Array("name" => APP_NAME, "email" => APP_EMAIL);
+	public function send_email($addressbook_id = null) {
 
-		# Subject
-		$subject = "Invite";
+		# if not logged in -> redirect to the login page
+		if (!$this->user) {
+			Router::redirect('/users/login');
+		}
 
-		# You can set the body as just a string of text
-		$body = 	"Hi ".$friend['first_name'].", I would like you to try out my new application BluerSkies at bluerskies.biz.\n
-					There is some really fun stuff to do on it.\n
-					All the very best,\n\n
-					Jonathan";
+		##Setup view
+		$this->template->content = View::instance('v_send_email');
+		$this->template->title = "Send an Email";
+		$this->template->content->addressbook_id = $addressbook_id;
 
-		# OR, if your email is complex and involves HTML/CSS, you can build the body via a View just like we do in our controllers
-		# $body = View::instance('e_users_welcome');
+		#Render template
+		echo $this->template;
 
-		# Build multi-dimension arrays of name / email pairs for cc / bcc if you want to 
-		$cc  = "";
-		$bcc = "";
+	}
 
-		# With everything set, send the email
-		$email = Email::send($to, $from, $subject, $body, true, $cc, $bcc);
+	public function p_send_email($addressbook_id = null) {
+
+		// get email address from database
+
+		Email(emailAddress, emailMessage) 
+
+	}
+
+	public function send_sms($addressbook_id = null) {
+
+				# if not logged in -> redirect to the login page
+		if (!$this->user) {
+			Router::redirect('/users/login');
+		}
+
+		##Setup view
+		$this->template->content = View::instance('v_send_sms');
+		$this->template->title = "Send a Text Message";
+		$this->template->content->addressbook_id = $addressbook_id;
+
+		#Render template
+		echo $this->template;
+	}
+
+	public function p_send_sms($addressbook_id = null) {
+
+		// get mobile number from database
+		// get carrier from database
+
+		function Email(emailAddress, emailMessage) 
+
 	}

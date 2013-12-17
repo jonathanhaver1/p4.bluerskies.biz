@@ -39,6 +39,7 @@
 
 
 <div id = "comment_box_right">
-    On this page you see the posts by the people you follow.<br>
-    You can email a post using 'Email This Post'.
+    On this page you see the to dos you have done.<br><br>
+    Congratulations!<br><br>
+    If you find out that a to do is not really done yet, you can 'push it back' into the to do list by clicking on 'I have not really done it'.<br>
 </div>
