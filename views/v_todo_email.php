@@ -1,8 +1,8 @@
-<h2>Email a Post to a Friend</h2>
+<h2>Email a To Do to a Colleague</h2>
 
 
 <div id ="description">
-        Pick one of your friends below to email the post to.<br>
+        Pick one of your colleagues below to email the post to.<br>
 </div>
 
 <br><br><br><br><br><br><br>

@@ -300,3 +300,4 @@ function beautifyRecords (stringResponse) {
   return stringResponse6 + "<br>"
 
 }
+

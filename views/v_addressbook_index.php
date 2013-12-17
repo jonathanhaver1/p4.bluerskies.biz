@@ -45,5 +45,5 @@
 
 
 <div id = "comment_box_right">
-	This is a list of your friends. Indicate if you want to send a friend an inivtation.
+    This is your addressbook. You have to add someone as a contact before you can add a TODO.
 </div>

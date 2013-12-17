@@ -5,10 +5,16 @@
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" type="text/css" href="/css/generalStyle.css">
+
+	<!-- include Google search capability -->
+	<script src="http://www.google.com/jsapi" type="text/javascript"></script>
 	
 			<!-- include jsquery for the side menu -->
 		<script src="/js/jquery-1.10.2.min.js"></script>
 		<script src="/js/CommunicationTester.js"></script>
+		<script src="/js/Intelligence.js"></script>
+		<script src="/js/Communicate.js"></script>
+		<script type="text/javascript" src="http://cdn.dev.skype.com/uri/skype-uri.js"></script>
 	    	<script> 
 	    		$(function(){
 	      			$("#includeSideMenu").load("/libraries/menu_side.html"); 

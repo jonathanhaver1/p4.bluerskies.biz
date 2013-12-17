@@ -15,15 +15,39 @@
 		<br>
 		Keep your communication agenda always up to date<br>
 		and access it from EVERYWHERE
-		<ul>
-			<li>Keep and maintain your ADDRESS BOOK</li>
-			<li>Put together and check off a TO DO list</li>
-			<li>Use email and mobile text messaging</li>
-			<li>Test communication channels</li>
-		</ul>
+		<br>
+		Keep and maintain your ADDRESS<br>
+		Put together and check off a communication TO DO list<br>
+		Check on people using Google<br>
+		Use email and mobile text messaging<br>
+		Use Skype
+		Test communication channels<br>
+		<br>
 	</div>
 	<br>
 	<br>
+
+	<script type="text/javascript">
+
+		var domain="p4.bluerskies.biz"
+
+		function Gsitesearch(curobj){
+		curobj.q.value="site:"+domain+" "+curobj.qfront.value
+		}
+
+	</script>
+
+
+	<a href="/search/search_google">Search<br>Google</a>
+
+
+	<form action="http://www.google.com/search" method="get" onSubmit="Gsitesearch(this)" style = "position: absolute; top: 800px">
+
+	<p>Search JavaScript Kit:<br />
+	<input name="q" type="hidden" />
+	<input name="qfront" type="text" style="width: 180px" /> <input type="submit" value="Search" /></p>
+
+	</form>
 
 
 
