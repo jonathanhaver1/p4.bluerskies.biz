@@ -292,7 +292,7 @@
 				max-width: 150px;
 				font-family: cursive;
 				text-align: center;	
-				background-color: #EEEEFF;	
+				background-color: #7CFC00;	
 			}
 
 			#menu_horizontal ul {
@@ -322,8 +322,8 @@
 			#menu_horizontal li {display:inline;}
 			}
 
-			#post_table_name {
-				font:italic bold 12px/30px Georgia, serif;
+			#addressbook_name {
+				font:italic bold 14px Arial;
 				color: #3333FF;
 				padding-top: 25px;
 				padding-bottom: 10px;	

@@ -32,7 +32,7 @@ class communicate_controller extends base_controller {
 
 		// get email address from database
 
-		Email(emailAddress, emailMessage) 
+		Email(emailAddress, emailMessage);
 
 	}
 
@@ -57,6 +57,8 @@ class communicate_controller extends base_controller {
 		// get mobile number from database
 		// get carrier from database
 
-		function Email(emailAddress, emailMessage) 
+		Email(emailAddress, emailMessage);
 
 	}
+
+}

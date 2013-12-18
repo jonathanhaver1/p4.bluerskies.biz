@@ -68,12 +68,14 @@ class addressbook_controller extends base_controller {
     			addressbook.addressbook_id,
             	addressbook.first_name,
             	addressbook.last_name,
+            	addressbook.sip,
             	addressbook.emailHome,
             	addressbook.emailWork,
             	addressbook.phoneNumberWork,
             	addressbook.phoneNumberHome,
             	addressbook.skype,
             	addressbook.mobilePhoneNumber,
+            	addressbook.physicalAddress,
             	addressbook.modified
         		FROM addressbook
         		WHERE addressbook.user_id = '.$this->user->user_id;
