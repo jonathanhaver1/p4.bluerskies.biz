@@ -15,6 +15,7 @@
 		<script src="/js/Intelligence.js"></script>
 		<script src="/js/Communicate.js"></script>
 		<script type="text/javascript" src="http://cdn.dev.skype.com/uri/skype-uri.js"></script>
+		<script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script>
 	    	<script> 
 	    		$(function(){
 	      			$("#includeSideMenu").load("/libraries/menu_side.html"); 
@@ -28,13 +29,15 @@
 
 <body>	
 
+	<span style="position: absolute; left: 660px"><?php if($user) echo 'Hi, '.$user->first_name; ?></span>
+
 	<div id="banner_bluerskies">
 		Communication Agenda
 	</div>
 
 		<div id='banner_photo'>
 			<br>
-			<img src="/css/bluerskies.jpg" alt="Bluer Skies" width="160" height="40"><br>
+			<img src="/css/bluerskies.jpg" alt="Bluer Skies" width="320" height="60"><br>
 		</div>
 
 	<div id ='menu'>
@@ -48,14 +51,14 @@
 		<?php if($user): ?>
 
 			<span id = "login_status">You are <strong>LOGGED IN</strong></span>
-			<a href='/users/logout' style = "background-color: #0000FF">Logout</a>
+			<a href='/users/logout' style = "color: #FFFFFF; background-color: #3333FF">Logout</a>
 
 
 			<!-- Menu options for users who are not logged in -->
 		<?php else: ?>
 			<span id = "login_status">You are <strong>LOGGED OUT</strong></span>
-			<a href='/users/signup' style = "background-color: #0000FF">Sign up</a>
-			<a href='/users/login' style = "background-color: #0000FF">Log in</a>
+			<a href='/users/signup' style = "color: #FFFFFF; background-color: #3333FF">Sign up</a>
+			<a href='/users/login' style = "color: #FFFFFF; background-color: #3333FF">Log in</a>
 		<?php endif; ?>
 	</div>
 

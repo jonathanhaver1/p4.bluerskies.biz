@@ -29,7 +29,7 @@ function sendEmail(emailAddressString, emailMessageString) {
       }
     });
   } else {
-    alert ("This email address is not valid\nPlease enter it again")
+    alert ("This email address is not valid\nPlease enter it again\n\n" + emailAddressString)
   }
 }
 

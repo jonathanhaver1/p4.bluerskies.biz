@@ -1,4 +1,4 @@
-<h2>Add a Friend</h2>
+<h2>Add a Contact</h2>
 
 <div id ="description">
         You can add a new address book entry<br>
@@ -11,24 +11,41 @@
 	<span style='align:center'>
 
     <br>
-    Please enter your friend's details.<br>
+    Please enter the new contact's details.<br>
     <br>
     <br>
 
-    <label for='first_name'>First Name:</label><br>
+    <label for='first_name'>First Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <textarea name='first_name' id='first_name' type='text' size='30'></textarea><br><br>
 
-    <label for='last_name'>Last Name:</label><br>
+    <label for='last_name'>Last Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <textarea name='last_name' id='last_name' type='text' size='30'></textarea><br><br>
 
-    <label for='email'>Email Address:</label><br>
-    <textarea name='email' id='email' type='text' size='30'></textarea><br>
-    <span style = "color: maroon; font-size: small; font-type: bold">This address will be verified.</span><br><br>
+    <label for='emailHome'>Home Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <textarea name='emailHome' id='emailHome' type='text' size='30'></textarea><br>
+    <span style = "color: navy; font-size: small; font-type: bold">This address will be verified</span><br><br>
 
-    <label for='mobilePhoneNumber'>Mobile Phone Number:</label><br>
+    <label for='emailWork'>Work Email</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <textarea name='emailWork' id='emailWork' type='text' size='30'></textarea><br>
+    <span style = "color: navy; font-size: small; font-type: bold">This address will be verified</span><br><br>
+
+    <label for='sip'>SIP address</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <textarea name='sip' id='sip' type='text' size='30'></textarea><br>
+    <span style = "color: navy; font-size: small; font-type: bold">The domain will be verified</span><br><br>
+
+    <label for='mobilePhoneNumber'>Home Phone</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <textarea name='phoneNumberHome' id='phoneNumberHome' type='number' size='10'></textarea><br><br>
+    
+    <label for='phoneNumberWork'>Work Phone</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <textarea name='mobilePhoneNumber' id='phoneNumberWork' type='number' size='10'></textarea><br><br>
+
+    <label for='mobilePhoneNumber'>Skype name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <textarea name='skype' id='skype' type='text' max-length='30'></textarea><br><br>
+
+    <label for='mobilePhoneNumber'>Mobile Phone</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <textarea name='mobilePhoneNumber' id='mobilePhoneNumber' type='number' size='10'></textarea><br><br>
 
-    <label for='mobilePhoneCarrier'>Mobile Phone Carrier:</label><br>
+    <label for='mobilePhoneCarrier'>Mobile Phone Carrier</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <select name="mobilePhoneCarrier" type= "text">
                 <option value = "US-T">T-Mobile
                 <option value = "US-Vi">Virgin Mobile
@@ -56,6 +73,7 @@
 
         <!-- main menu on left side !-->
         <div id="includeSideMenu"></div>
+
 
 <div id = "comment_box_right">
     When you add a friend, only you have access to your friends.<br>

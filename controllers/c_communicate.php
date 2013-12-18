@@ -36,6 +36,22 @@ class communicate_controller extends base_controller {
 
 	}
 
+		public function send_email_enterAddress() {
+
+		# if not logged in -> redirect to the login page
+		if (!$this->user) {
+			Router::redirect('/users/login');
+		}
+
+		##Setup view
+		$this->template->content = View::instance('v_send_email_enterAddress');
+		$this->template->title = "Send an Email";
+
+		#Render template
+		echo $this->template;
+
+	}
+
 	public function send_sms($addressbook_id = null) {
 
 				# if not logged in -> redirect to the login page

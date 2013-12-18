@@ -14,8 +14,8 @@
 
         Priority: <strong><?=$todo['priority']?></strong><br><br>
 
-        <span id="todo_table_name"><u><?=$todo['first_name']?> <?=$todo['last_name']?></u></span> added on
-
+        <span id="todo_table_name"><u><?=$todo['first_name']?> <?=$todo['last_name']?></u></span><br>
+        added on
         <time datetime="<?=Time::display($todo['created'],'Y-m-d G:i')?>">
                 <span style="font: arial"><?=Time::display($todo['created'])?></span>
         </time>
@@ -24,7 +24,7 @@
 
         <span id="todo_topic"><?=$todo['topic']?></span><br><br>
 
-        <span id="button_content"><a href="/todo/not_done/<?=$todo['todo_id']?>">I have not really done it</a></span><br>
+        <span id="button_content" style ="background-color: pink"><a href="/todo/not_done/<?=$todo['todo_id']?>">I have not really done it</a></span><br>
         <span style ="font-size: small">To change the PRIORITY you have to select this option</span><br>
 
 
