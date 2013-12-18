@@ -20,12 +20,17 @@
         </time><br>
         <form>
             Work Email: <?=$contact['emailWork']?><br>
-            <input type = "radio" name="records" onclick="check_email(<?=$contact['emailWork']?>)" value="check email">Check Email Records</input><br>
+            <input type = "submit" name="records" onclick="mail_check(<?=$contact['emailWork']?>)" value ="Check Internet email records"></input><br>
+            <div id = "mxRecordExists">->See here if the email can be routed in the Internet</div>
             Home Email: <?=$contact['emailHome']?><br>
-            <input type = "radio" name="records" onclick="check_email(<?=$contact['emailHome']?>)" value="check email">Check Email Records</input><br>
+            <input type = "submit" name="records" onclick="mail_check(<?=$contact['emailHome']?>)" value ="Check Internet email records"></input><br>
+            <div id = "mxRecordExists">->See here if the email can be routed in the Internet</div>
             Work Phone: <?=$contact['phoneNumberWork']?><br>
+            <input type = "submit" name="records" onclick="mail_check(<?=$contact['phoneNumberWork']?>)" value ="Check phone syntax"></input><br>
             Home Phone: <?=$contact['phoneNumberHome']?><br>
+            <input type = "submit" name="records" onclick="mail_check(<?=$contact['phoneNumberHome']?>)" value ="Check phone syntax"></input><br>
             Mobile Phone: <?=$contact['mobilePhoneNumber']?><br>
+            <input type = "submit" name="records" onclick="mail_check(<?=$contact['mobilePhoneNumber']?>)" value ="Check phone syntax"></input><br>
         </form><br>
 
             <span id="post_content"><a href='/communicate/sendEmail/<?=$contact['addressbook_id']?>'>Send Work Email</a></span><br>

@@ -40,7 +40,7 @@
 	<div id ='menu'>
 
 		<a href='/'>Home</a>
-		<a href='/todo/index'>To Do</a>
+		<a href='/todo/index_todo'>To Do</a>
 		<a href='/addressbook/index'>Addresses</a>
 		<br><br><br><br><br><br><br><br><br>
 
