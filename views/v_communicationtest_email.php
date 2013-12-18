@@ -10,7 +10,7 @@
 			and then looks up the domain in the mail server mx record<br>
 			to make sure it is a valid email address which can be reached.</span><span><br><br>
 		
-		<form name="emailForm" method="post" action="#" id ="communicationtest_form"><br>
+		<form name="emailForm" method="post" action="#" id ="form_communicationtest"><br>
 
 			Email Address<br>
 
@@ -21,19 +21,19 @@
 
 		<span style ="color: navy; font:bold 16px Georgia, serif;">= DOMAIN =</span><br>
 			<div id = "domainName">Please enter an email address<br>and click 'Check Address'</div><br>
-		<span style ="color: navy; font:bold 16px Georgia, serif;">= IS THERE A DNS RECORD? =</span><br>
+		<span style ="color: navy; font:bold 16px Georgia, serif;" >= IS THERE A DNS RECORD? =</span><br>
 			<div id = "mxRecordExists">Please enter an email address<br>and click 'Check Address'</div><br>
 
-		<p>
+		<span id = "communicationest">
 			The <u>DNS</u> record shows if the domain name can be resolved ('exists').<br><br>
 			The mail exchange (<u>MX</u>) record within the DNS specifies the mail server<br>
 			responsible for accepting (SMTP) email messages on behalf of a recipient's domain.<br>
 			A domain may exist but still have a null MX record<br>
 			if it is not intended to receive mail.<br><br>
 			If you want to see the MX or DNS records click one of the following:<br><br>
-		</p>	
+		</span>	
 
-		<form id = "communicationtest_form">
+		<form id = "form_communicationest">
 
 			Domain:<br>
 

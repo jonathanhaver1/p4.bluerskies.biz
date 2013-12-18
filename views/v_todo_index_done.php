@@ -24,7 +24,7 @@
 
         <span id="todo_topic"><?=$todo['topic']?></span><br><br>
 
-        --><a href="/todo/not_done/<?=$todo['todo_id']?>">I have not really done it</a><br>
+        <span id="button_content"><a href="/todo/not_done/<?=$todo['todo_id']?>">I have not really done it</a></span><br>
         <span style ="font-size: small">To change the PRIORITY you have to select this option</span><br>
 
 

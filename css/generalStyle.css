@@ -159,10 +159,10 @@
 			#menu a {
 				text-decoration: none;
 				font-family: arial;
-				color: #FFFFFF;
+				color: #000000;
 				display: block;
-				border: 8px blue outset;
-				background-color: #3333FF;
+				border: 8px grey outset;
+				background-color: #CCCCCC;
 				width: 5em;
 				float: left;
 				text-align: center;
@@ -221,7 +221,7 @@
 				padding-right: 10px;
 				padding-top: 20px;
 				padding-bottom: 20px;
-				width: 170px;
+				width: 150px;
 			}
 			#menu_side ul {
 			  display: block;
@@ -282,7 +282,7 @@
 				margin-bottom: 20px;
 			}
 
-			#post_content {
+			#button_content {
 				font-size: 90%;
 				color: #000099;
 				border: 2px dotted;
@@ -387,15 +387,20 @@
 			 	background-color: #FFFF66;
 			 }
 
-			 #form_communicationtest {
-				position: absolute;
-				top: 60px;
-				left: 230px;
+			#form_communicationtest {
+			 	position: absolute;
 				border: 10px ridge #660066;
-				margin-top: 200px;
-				margin-bottom: 25px;
-				padding-left: 10px;
-				padding-right: 10px;
+				margin-top:20px;
+				left: 330px;
+				width:200px;
+				text-align: center;	
+			}
+
+			#communicationtest {
+				position: absolute;
+				margin-top:20px;
+				left: 330px;
+				width:200px;
 				text-align: center;	
 			}
 
