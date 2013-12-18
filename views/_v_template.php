@@ -12,9 +12,7 @@
 			<!-- include jsquery for the side menu -->
 		<script src="/js/jquery-1.10.2.min.js"></script>
 		<script src="/js/CommunicationTester.js"></script>
-		<script src="/js/Intelligence.js"></script>
 		<script src="/js/Communicate.js"></script>
-		<script type="text/javascript" src="http://cdn.dev.skype.com/uri/skype-uri.js"></script>
 		<script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script>
 	    	<script> 
 	    		$(function(){
@@ -62,6 +60,15 @@
 		<?php endif; ?>
 	</div>
 
+
+	<form action="http://www.google.com/search" method="get" onSubmit="Gsitesearch(this)" style = "position: absolute; top: 60px; left: 600px">
+		<div style = "border: 1px; color: blue; background-color: #CCCCFF; padding-left: 5px; padding-right: 5px; text-align: center">
+			Search this site using Google<br>
+			<input name="q" type="hidden"></input>
+			<input name="qfront" type="text" style="width: 180px"></input><br>
+			<input type="submit" value="Search on Bluerskies"></input>
+		</div>
+	</form>
 
 
 	<?php if(isset($content)) echo $content; ?>

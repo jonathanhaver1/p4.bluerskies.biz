@@ -67,16 +67,7 @@ class addressbook_controller extends base_controller {
     	$q = 'SELECT 
     			addressbook.addressbook_id,
             	addressbook.first_name,
-            	addressbook.last_name,
-            	addressbook.sip,
-            	addressbook.emailHome,
-            	addressbook.emailWork,
-            	addressbook.phoneNumberWork,
-            	addressbook.phoneNumberHome,
-            	addressbook.skype,
-            	addressbook.mobilePhoneNumber,
-            	addressbook.physicalAddress,
-            	addressbook.modified
+            	addressbook.last_name
         		FROM addressbook
         		WHERE addressbook.user_id = '.$this->user->user_id;
 
@@ -89,6 +80,44 @@ class addressbook_controller extends base_controller {
 		# Render the View
 		echo $this->template;
 	}
+
+		public function entry($addressbook_id = null) {
+
+			if (isset($addressbook_id)) {
+
+			# Set up the View
+			$this->template->content = View::instance('v_addressbook_entry');
+
+			# Build the query
+	   		# Query
+	    	$q = 'SELECT 
+	    			addressbook.addressbook_id,
+	            	addressbook.first_name,
+	            	addressbook.last_name,
+	            	addressbook.sip,
+	            	addressbook.emailHome,
+	            	addressbook.emailWork,
+	            	addressbook.phoneNumberWork,
+	            	addressbook.phoneNumberHome,
+	            	addressbook.skype,
+	            	addressbook.mobilePhoneNumber,
+	            	addressbook.physicalAddress,
+	            	addressbook.modified
+	        		FROM addressbook
+	        		WHERE addressbook.addressbook_id = '.$addressbook_id;
+
+			# Run the query
+			$contact = DB::instance(DB_NAME)->select_row($q);
+
+			# Pass data to the View
+			$this->template->content->contact = $contact;
+			$this->template->title   = $contact['first_name'].' '.$contact['last_name'];
+
+			# Render the View
+			echo $this->template;
+		}
+	}
+
 
 }
 

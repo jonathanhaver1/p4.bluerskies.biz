@@ -12,50 +12,9 @@
 
     <article>
 
-        <span id="addressbook_name"><?=$contact['first_name']?> <?=$contact['last_name']?></span><br>
+        <span id="addressbook_name"><a href = '/addressbook/entry/<?=$contact['addressbook_id']?>'><?=$contact['first_name']?> <?=$contact['last_name']?></span><br>
 
-        on the list since: 
-        <time datetime="<?=Time::display($contact['modified'],'Y-m-d G:i')?>">
-                <?=Time::display($contact['modified'])?><br>
-        </time><br>
-        <form>
-
-            SIP address: <?=$contact['sip']?><br>
-            <span id="button_content"><a href="sip:<?=$contact['sip']?>">CALL</a></span><br><br>
-
-            Work Email: <?=$contact['emailWork']?><br>
-            <span id="button_content"><a href='/communicate/send_email/<?=$contact['emailWork']?>'>SEND EMAIL</a></span><br>
-            <input type = "submit" name="records" onclick="mail_check(<?=$contact['emailWork']?>)" value ="Check DNS"></input><br>
-
-            Home Email: <?=$contact['emailHome']?><br>
-            <span id="button_content"><a href='/communicate/send_email/<?=$contact['addressbook_id']?>'>SEND EMAIL</a></span><br>
-            <input type = "submit" name="records" onclick="mail_check(<?=$contact['emailHome']?>)" value ="Check DNS"></input><br>
-            <div style = "font-size: small; background-color: #CCFFFF; width: 115px">DNS lookup result:&nbsp;</div><div id = "mxRecordExists"></div><br>
-
-            Work Phone: <?=$contact['phoneNumberWork']?>&nbsp;
-            <span id="button_content"><a href="tel:<?=$contact['phoneNumberWork']?>">CALL</a></span><br>
-
-            Home Phone: <?=$contact['phoneNumberHome']?>&nbsp;
-            <span id="button_content"><a href="tel:<?=$contact['phoneNumberHome']?>">CALL</a></span><br>
-
-            Mobile Phone: <?=$contact['mobilePhoneNumber']?><br>
-            <span id="button_content"><a href='/communicate/sendSMS/<?=$contact['addressbook_id']?>'>SEND SMS</a></span>&nbsp;
-            <span id="button_content"><a href="tel:<?=$contact['phoneNumberHome']?>">CALL</a></span><br><br>
-
-            Address:<br>
-            <?=$contact['physicalAddress']?><br>
-
-
-
-        </form><br>
-
-
-        <span id="button_content" style ="background-color: pink"><a href='/todo/add/<?=$contact['addressbook_id']?>'>Add a To Do</a></span><br>
-
-        ______________________________________
-
-
-        <br><br>
+        <br>
 
     </article>
 

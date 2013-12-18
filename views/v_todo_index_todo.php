@@ -10,9 +10,26 @@
 
 <?php foreach($todos as $todo): ?>
 
+        <!-- determine Skype status -->
+        <script>
+            function getSkypeStatus(skypeId,iconType,skypeEvent,statusShowId){
+                 var image = new Image()
+                 $(image).attr('src','http://mystatus.skype.com/'+iconType+'/'+skypeId);
+                 var src = $(image).attr('src');
+                 var html = skypeId +  '<a href="skype:'+skypeId+'?'+skypeEvent+'" onclick="return skypeCheck();"><img src="'+src+'" border="0"></a>';
+                 $('#show_status_1').append(html);
+        }
+
+            $(function() { getSkypeStatus
+                ('<?=$todo['skype']?>','smallicon','chat','show_status_1');
+            });
+        </script>
+
+
     <article>
 
         Priority: <strong><?=$todo['priority']?></strong><br><br>
+        Skype Status: <div id='show_status_1'></div><br>
 
         <span id="todo_table_name"><u><?=$todo['first_name']?> <?=$todo['last_name']?></u></span><br>
         added on
@@ -38,21 +55,9 @@
         <span id="button_content"><a href="skype:<?=$todo['phoneNumberHome']?>?call" data-role="button" rel="external">Call Private Phone</a></span>
         <span id="button_content"><a href="skype:<?=$todo['phoneNumberWork']?>?call" data-role="button" rel="external">Call Work Phone</a></span><br>
         <span id="button_content"><a href='/communicate/sendSMS/<?=$todo['address_id']?>'>Call Skype ID</a></span><br><br>
-        Skype status: 
-        <div id='show_status_1'></div>
 
         <script>
-        function getSkypeStatus(skypeId,iconType,skypeEvent,statusShowId){
-         var image = new Image()
-         $(image).attr('src','http://mystatus.skype.com/'+iconType+'/'+skypeId);
-         var src = $(image).attr('src');
-         var html = skypeId +  '<a href="skype:'+skypeId+'?'+skypeEvent+'" onclick="return skypeCheck();"><img src="'+src+'" border="0"></a>';
-         $('#show_status_1').append(html);
-        }
 
-        $(function() { getSkypeStatus
-        ('<?=$todo['skype']?>','smallicon','chat','show_status_1');
-        });
         </script> 
 
         
