@@ -1,8 +1,9 @@
 <h2>Your Addressbook</h2>
 
 <div id ="description">
-        Below are the contacts in your addressbook.
-        You can verify these addresses.<br>
+        Below are the contacts in your addressbook.<br>
+        <spam style = "color: blue">ADD a TO DO by selecting the person<br>you need to contact.<br>
+            If the individual is not listed,<br>umake an addition via 'New Entry'.</span>
 </div>
 
 <br><br><br><br><br><br><br>

@@ -6,9 +6,13 @@ If you have not yet signed in, go to Sign in below.
 
 </div>
 
-<br><br><br><br><br>
 
-<form method = 'POST' action='/users/p_signup'>
+
+<br><br><br><br>
+
+<form method = 'POST' id = "form_profile" action='/users/p_signup'>
+
+	    <span style = "color: navy; font-size: small; font-type: bold">Do not leave a field blank</span><br><br>
 
 	First Name<br>
 	<input type = 'text' name = 'first_name'>

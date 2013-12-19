@@ -2,8 +2,10 @@
 
 		<span id = "description">
 			The email will be sent to the recipient you selected.<br>
-			Your name will autmoatically be added to it
+			Your name will autmoatically be added to it.
 		</span>
+
+		    <span style = "color: navy; font-size: small; font-type: bold">Do not leave a field blank</span>
 
 		<div style = "margin-top: 150px"></span>
 

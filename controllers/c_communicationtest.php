@@ -50,7 +50,7 @@ class communicationtest_controller extends base_controller {
 		$this->template->content = View::instance('v_communicationtest_sms');
 		$this->template->title = "Send a Text Message";
 		$this->template->content->mobilePhoneNumber = $mobilePhone['mobilePhoneNumber'];
-		$this->template->content->mobilePhoneCarrier = $mobilePhone['mobilePhoneCarrier']
+		$this->template->content->mobilePhoneCarrier = $mobilePhone['mobilePhoneCarrier'];
 
 		#Render template
 		echo $this->template;

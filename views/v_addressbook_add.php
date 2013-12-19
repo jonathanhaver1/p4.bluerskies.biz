@@ -12,8 +12,8 @@
 
     <br>
     Please enter the new contact's details.<br>
-    <br>
-    <br>
+    <span style = "color: navy; font-size: small; font-type: bold">Do not leave a field blank</span>
+    <br><br>
 
     <label for='first_name'>First Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <textarea name='first_name' id='first_name' type='text' size='30'></textarea><br><br>

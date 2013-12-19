@@ -5,7 +5,8 @@
 
     <span style='align:center'><br>
 
-        <label for='topic'>What would you like to do (in 120 characters or less)?</label><br><br>
+        <label for='topic'>What would you like to do (in 120 characters or less)?</label><br>
+            <span style = "color: navy; font-size: small; font-type: bold">Do not leave the field blank</span><br>
 
             <textarea name='topic' id='topic' type='text' rows='6' cols='45' max-length='120'></textarea><br><br>
 
