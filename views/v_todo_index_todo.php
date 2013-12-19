@@ -29,6 +29,7 @@
     <article>
 
         <span id="todo_table_name"><u><?=$todo['first_name']?> <?=$todo['last_name']?></u></span><br>
+        <a href='/todo/add/<?=$todo['address_id']?>' id="button_content" style ="background-color: pink">Add Another To Do</a><br>
 
         Priority: <strong><?=$todo['priority']?></strong><br><br>
                 <a href="/todo/priority_increase/<?=$todo['todo_id']?>">PRIORITY <strong>+1</strong></a>&nbsp;
@@ -59,10 +60,7 @@
 
         <script>
 
-        </script> 
-
-        
-        <span id="button_content" style ="background-color: pink"><a href='/todo/add/<?=$todo['address_id']?>'>Add a To Do</a></span><br>
+        </script>
 
         ________________________________________<br><br>
 

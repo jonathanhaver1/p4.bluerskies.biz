@@ -9,11 +9,9 @@ function Email(emailAddress, emailMessage, signature) {
     alert ("You did not fill in all the fields.\n\nPlease try again")
   } else {
 
-    var emailMessageString = emailMessage.value.toString() + " --- " + signature.value.toString()
-    var EmailAddressString = emailAddress.value.toString()
+    var emailMessageString = emailMessage.value + " --- " + signature
 
-
-    sendEmail(emailAddressString, emailMessageString) 
+    sendEmail(emailAddress, emailMessageString) 
   }
 }
 

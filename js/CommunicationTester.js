@@ -120,7 +120,28 @@ function mx_lookup (domainName) {
     cache: false,
 
     success: function(response){
+      alert(response)
       $('#mxRecordExists').html(response);
+
+  }
+    });
+}
+
+
+function mx_lookup_button (email) {
+
+      // extract domain
+    var emailDomain = email.replace(/.*@/, "")
+
+      mx_lookup (emailDomain)
+
+  $.ajax({
+    type: "POST",
+    url: "/libraries/lookup_dns.php",
+    data: {domainString: domainName.toString()}, 
+    cache: false,
+    success: function(response){
+      alert (response);
 
   }
     });

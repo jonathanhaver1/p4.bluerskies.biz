@@ -25,7 +25,8 @@
 
         <article>
 
-        <span id="addressbook_name"><?=$contact['first_name']?> <?=$contact['last_name']?></span><br><br>
+        <span id="addressbook_name"><?=$contact['first_name']?> <?=$contact['last_name']?></span><br>
+                <a href='/todo/add/<?=$contact['addressbook_id']?>' id="button_content" style ="background-color: pink">Add a To Do</a></span><br><br>
                 Skype Status: <div id='show_status_1'></div><br>
 
         on the list since: 
@@ -39,11 +40,11 @@
 
             Work Email: <?=$contact['emailWork']?><br>
             <a href='/communicate/send_email/<?=$contact['emailWork']?>' id="button_content">SEND EMAIL</a>&nbsp;&nbsp;&nbsp;
-            <input type = "submit" name="records" onclick="mail_check(<?=$contact['emailWork']?>)" value ="Check DNS"></input><br>
+            <button type = "button" name="Button" onclick='mx_lookup_button("<?=$contact['emailWork']?>")' value ="Check DNS">Check DNS</button><br>
 
             Home Email: <?=$contact['emailHome']?><br>
             <a href='/communicate/send_email/<?=$contact['emailHome']?>' id="button_content">SEND EMAIL</a>&nbsp;&nbsp;&nbsp;
-            <input type = "submit" name="records" onclick="mail_check(<?=$contact['emailHome']?>)" value ="Check DNS"></input><br>
+            <button type = "button" name="Button" onclick='mx_lookup_button("<?=$contact['emailHome']?>")' value ="Check DNS">Check DNS</button><br>
             <div style = "font-size: small; background-color: #CCFFFF; width: 115px">DNS lookup result:&nbsp;</div><div id = "mxRecordExists"></div><br>
 
             Work Phone: <?=$contact['phoneNumberWork']?>&nbsp;
@@ -59,12 +60,7 @@
             Address:<br>
             <?=$contact['physicalAddress']?>
 
-
-
         </form><br>
-
-
-        <span id="button_content" style ="background-color: pink"><a href='/todo/add/<?=$contact['addressbook_id']?>'>Add a To Do</a></span><br>
 
     </article>
 
