@@ -8,11 +8,14 @@
 		<div style = "margin-top: 150px"></span>
 
 	 	<form name = "emailForm" id = "communicationtest_form" style = "position: absolute; left:345px; text-align: center">
-		    Email Address
-		    <input  name = "email" id = "email" type = "text" value="email"></input><br><br>
-			<textarea id = "message">Enter your message here
+	 	 <span style = "color: navy; font-size: small; font-type: bold">Do not leave any of the fields blank</span><br><br>
+		    Email Address<br>
+		    <input  name = "email" id = "email" type = "text" value="email address"></input><br><br>
+			<textarea id = "message" rows = "5" cols = "45">Enter your message here
 			</textarea><br><br>
-			<button type = "button" name="Button" value="Send Email" onclick="sendEmail/email/message">Send Email</button>
+			Signature<br>
+		    <input  name = "signature" id = "signature" type = "text" value="your signature"></input><br><br>
+			<button type = "button" name="Button" value="Send Email" onclick="sendEmail(email, message, signature)">Send Email</button>
 		</form>
 
 		<!-- main menu on left side !-->

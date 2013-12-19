@@ -6,7 +6,7 @@
             If the individual is not listed,<br>umake an addition via 'New Entry'.</span>
 </div>
 
-<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
 
 
 <?php foreach($addressbook as $contact): ?>

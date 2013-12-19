@@ -12,6 +12,6 @@ What do you want to do next?
 	<ul>
 		<li><a href="/addressbook/add">Add Another<br>Address</a></li>
 		<li><a href="/addressbook/index">View<br>Addresses</a></li>
-		<li><a href="/todo/index">View<br>To Do</a></li>
+		<li><a href="/todo/index_todo">View<br>To Do</a></li>
 	</ul>
 </div>

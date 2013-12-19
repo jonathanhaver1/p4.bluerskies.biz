@@ -3,14 +3,15 @@
 
 // convert to string value
 
-function Email(emailAddress, emailMessage) {
+function Email(emailAddress, emailMessage, signature) {
 
-  if (!isset(emailAddress) | !isset(emailMessage)) {
+  if (emailAddress == null | emailMessage == null | signature == null) {
     alert ("You did not fill in all the fields.\n\nPlease try again")
   } else {
 
-    var emailAddressString = emailAddress.value.toString()
-    var emailMessageString = emailMessage.value.toString()
+    var emailMessageString = emailMessage.value.toString() + " --- " + signature.value.toString()
+    var EmailAddressString = emailAddress.value.toString()
+
 
     sendEmail(emailAddressString, emailMessageString) 
   }
@@ -18,18 +19,17 @@ function Email(emailAddress, emailMessage) {
 
 // email sender
 
-function sendEmail(emailAddressString, emailMessageString, signature) {
+function sendEmail(emailAddressString, emailMessageString) {
 
   if (checkCharactersEmailAddress (emailAddressString)) {
     var alertText = "Sending the email to :" + emailAddressString
                             + "\nmessage: " + emailMessageString
-                            + "\nsignature: " + signature
     alert(alertText)
 
     $.ajax({
     type: "POST",
-      url: "sendEmail.php",
-      data: {emailAddressSend: emailAddressString, messageSend: emailMessageString + " --- " + signature},
+      url: "libraries/sendEmail.php",
+      data: {emailAddressSend: emailAddressString, messageSend: emailMessageString},
       cache: false,
       success: function(toAddress){
       alert ("Email to " + toAddress.toString() + " has been sent successfully")
@@ -45,19 +45,15 @@ function sendEmail(emailAddressString, emailMessageString, signature) {
 //------------------------- SEND SMS -------------------------------------------------
 
 
-function sendTextMessage() {
+function sendTextMessage(phoneNumber, carrier, message) {
 
-  if (!isset(document.smsForm.phoneNumber) | !isset(document.smsForm.message) | !isset(document.smsForm.carrier)) {
+  if (phoneNumber == null | message.value == null | carrier == null) {
     alert ("You did not fill in all the fields.\n\nPlease try again")
   } else {
 
-  	var pN = document.smsForm.phoneNumber
-  	var msg = document.smsForm.message
-  	var cr = document.smsForm.carrier
-
-    var phoneNumber = pN.value
-    var message = " " + msg.value
-    var carrier = cr.value
+    message = message.value.toString()
+    carrier = carrier.toString()
+    phoneNumber = phoneNumber.toString()
 
     var emailAddress
 

@@ -8,7 +8,7 @@
 <br><br><br><br><br><br><br>
 
 
-<?php foreach($todos as $todo): ?>
+<?php foreach($todos as $todo): ?><br>
 
         <!-- determine Skype status -->
         <script>
@@ -45,8 +45,8 @@
         <a href="/todo/done/<?=$todo['todo_id']?>" style = "border: blue 2px solid; background-color: #CCCCFF; text-decoration: none"><strong>DID IT :-)</Strong></a><br><br>
 
         EMAIL<br>
-        <a href='/communicate/sendEmail/<?=$todo['emailWork']?>' id="button_content">Write Work Email</a>
-        <a href='/communicate/sendEmail/<?=$todo['emailHome']?>' id="button_content">Write Private Email</a><br>
+        <a href='/communicate/send_email/<?=$todo['emailWork']?>' id="button_content">Write Work Email</a>
+        <a href='/communicate/send_email/<?=$todo['emailHome']?>' id="button_content">Write Private Email</a><br>
         TEXT MESSAGE<br>
         <a href='/communicate/send_sms/<?=$todo['address_id']?>' id="button_content">Write Text Message</a></span><br>
         PHONE CALL<br>

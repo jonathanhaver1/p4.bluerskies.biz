@@ -42,7 +42,7 @@
             <input type = "submit" name="records" onclick="mail_check(<?=$contact['emailWork']?>)" value ="Check DNS"></input><br>
 
             Home Email: <?=$contact['emailHome']?><br>
-            <a href='/communicate/send_email/<?=$contact['addressbook_id']?>' id="button_content">SEND EMAIL</a>&nbsp;&nbsp;&nbsp;
+            <a href='/communicate/send_email/<?=$contact['emailHome']?>' id="button_content">SEND EMAIL</a>&nbsp;&nbsp;&nbsp;
             <input type = "submit" name="records" onclick="mail_check(<?=$contact['emailHome']?>)" value ="Check DNS"></input><br>
             <div style = "font-size: small; background-color: #CCFFFF; width: 115px">DNS lookup result:&nbsp;</div><div id = "mxRecordExists"></div><br>
 
@@ -53,7 +53,7 @@
             <a href="tel:<?=$contact['phoneNumberHome']?>" id="button_content">CALL</a><br>
 
             Mobile Phone: <?=$contact['mobilePhoneNumber']?><br>
-            <a href='/communicate/sendSMS/<?=$contact['addressbook_id']?>' id="button_content">SEND SMS</a>&nbsp;
+            <a href='/communicate/send_sms/<?=$contact['addressbook_id']?>' id="button_content">SEND SMS</a>&nbsp;
             <a href="tel:<?=$contact['phoneNumberHome']?>" id="button_content">CALL</a><br><br>
 
             Address:<br>

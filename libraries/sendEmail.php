@@ -10,7 +10,7 @@
     $message = $_POST['messageSend'];
 
 	//send email
-    mail($toAddress, "test", $message);
+    mail($toAddress, "", $message);
 
   	echo $toAddress
 

@@ -14,7 +14,7 @@
 			    <span style = 'color: blue'><?=$emailAddress?></span><br><br>
 				<textarea id = "message" rows = '10' cols = '50'>Enter your test message --- <?=$name?>
 				</textarea><br><br>
-				<button type = "button" name="Button" value="Send Email" onclick="sendEmail(<?=$emailAddress?>, message, <?=$name?>)">Send Email</button>
+				<button type = "button" name="Button" value="Send Email" onclick='Email("<?=$emailAddress?>", message, "<?=$name?>")'>Send Email</button>
 			</form>
 
 		<!-- main menu on left side !-->
