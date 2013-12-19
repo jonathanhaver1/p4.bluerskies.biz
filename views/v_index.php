@@ -41,5 +41,3 @@
 				<a href="http://www.dreamstime.com/">Dreamstime Stock Photos</a>
 				& <a href="http://www.stockfreeimages.com/">Stock Free Images</a>)
 			</footer>
-
-</body>

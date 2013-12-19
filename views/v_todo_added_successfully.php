@@ -9,8 +9,8 @@ You shave successfully added a post.
 
 <div id="menu_horizontal">
 <ul>
-	<li><a href="/posts/add">Add<br>Another Post</a></li>
-	<li><a href="/posts/index">See<br>the Index</a></li>
-	<li><a href="/users/profile">Check Out<br>Your Profile</a></li>
+	<li><a href="/todo/add">Add a<br>To Do</a></li>
+	<li><a href="/todo/index_todo">See<br>the ToDo's</a></li>
+	<li><a href="/users/profile">See<br>the Done's</a></li>
 </ul>
 </div>

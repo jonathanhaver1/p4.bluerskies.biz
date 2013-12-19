@@ -28,33 +28,34 @@
 
     <article>
 
+        <span id="todo_table_name"><u><?=$todo['first_name']?> <?=$todo['last_name']?></u></span><br>
+
         Priority: <strong><?=$todo['priority']?></strong><br><br>
+                <a href="/todo/priority_increase/<?=$todo['todo_id']?>">PRIORITY <strong>+1</strong></a>&nbsp;
+            -&nbsp;&nbsp;<a href="/todo/priority_decrease/<?=$todo['todo_id']?>">PRIORITY <strong>-1</strong></a><br><br>
         Skype Status: <div id='show_status_1'></div><br>
 
-        <span id="todo_table_name"><u><?=$todo['first_name']?> <?=$todo['last_name']?></u></span><br>
-        added on
+        <u>TO DO:</u>
+        <span id="post_topic"><?=$todo['topic']?></span><br>
+        --- added on
         <time datetime="<?=Time::display($todo['created'],'Y-m-d G:i')?>">
                 <span style="font: arial"><?=Time::display($todo['created'])?></span>
-        </time>
+        </time> ---<br>
 
-        :<br><br>
+        <a href="/todo/done/<?=$todo['todo_id']?>" style = "border: blue 2px solid; background-color: #CCCCFF; text-decoration: none"><strong>DID IT :-)</Strong></a><br><br>
 
-        <span id="post_topic"><?=$todo['topic']?></span><br><br>
-
-        <a href="/todo/done/<?=$todo['todo_id']?>">I have done it</a><br>
-        <a href="/todo/priority_increase/<?=$todo['todo_id']?>">Increase Priority by 1</a>&nbsp;
-            -&nbsp;&nbsp;<a href="/todo/priority_decrease/<?=$todo['todo_id']?>">Decrease Priority by 1</a><br><br>
-
-        <span id="button_content"><a href='/communicate/sendEmail/<?=$todo['emailWork']?>'>Write Work Email</a></span>
-        <span id="button_content"><a href='/communicate/sendEmail/<?=$todo['emailHome']?>'>Write Private Email</a></span><br>
-        <span id="button_content"><a href='/communicate/send_sms/<?=$todo['address_id']?>'>Write Text Message</a></span><br>
-        Phone Call
-        <span id="button_content"><a href="tel:<?=$todo['phoneNumberHome']?>" data-role="button" rel="external">Call Private Phone</a></span>
-        <span id="button_content"><a href="tel:<?=$todo['phoneNumberWork']?>" data-role="button" rel="external">Call Work Phone</a></span><br>
-        Skype Call
-        <span id="button_content"><a href="skype:<?=$todo['phoneNumberHome']?>?call" data-role="button" rel="external">Call Private Phone</a></span>
-        <span id="button_content"><a href="skype:<?=$todo['phoneNumberWork']?>?call" data-role="button" rel="external">Call Work Phone</a></span><br>
-        <span id="button_content"><a href='/communicate/sendSMS/<?=$todo['address_id']?>'>Call Skype ID</a></span><br><br>
+        EMAIL<br>
+        <a href='/communicate/sendEmail/<?=$todo['emailWork']?>' id="button_content">Write Work Email</a>
+        <a href='/communicate/sendEmail/<?=$todo['emailHome']?>' id="button_content">Write Private Email</a><br>
+        TEXT MESSAGE<br>
+        <a href='/communicate/send_sms/<?=$todo['address_id']?>' id="button_content">Write Text Message</a></span><br>
+        PHONE CALL<br>
+        <a href="tel:<?=$todo['phoneNumberHome']?>" data-role="button" rel="external" id="button_content">Call Private Phone</a>
+        <a href="tel:<?=$todo['phoneNumberWork']?>" data-role="button" rel="external" id="button_content">Call Work Phone</a><br>
+        SKYPE CALL<br>
+        <a href="skype:<?=$todo['phoneNumberHome']?>?call" data-role="button" rel="external" id="button_content">Call Private Phone</a>
+        <a href="skype:<?=$todo['phoneNumberWork']?>?call" data-role="button" rel="external" id="button_content">Call Work Phone</a><br>
+        <a href='/communicate/sendSMS/<?=$todo['address_id']?>' id="button_content">Call Skype ID</a><br><br>
 
         <script>
 

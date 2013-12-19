@@ -292,7 +292,8 @@
 				max-width: 150px;
 				font-family: cursive;
 				text-align: center;	
-				background-color: #7CFC00;	
+				background-color: #7CFC00;
+				text-decoration: none;
 			}
 
 			#menu_horizontal ul {

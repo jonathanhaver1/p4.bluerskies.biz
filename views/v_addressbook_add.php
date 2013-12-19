@@ -31,7 +31,7 @@
 
     <label for='sip'>SIP address</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <textarea name='sip' id='sip' type='text' size='30'></textarea><br>
-    <span style = "color: navy; font-size: small; font-type: bold">The domain will be verified</span><br><br>
+    <span style = "color: navy; font-size: small; font-type: bold">Verify the domain under 'DNS/MX LOOKUP'</span><br><br>
 
     <label for='phoneNumberHome'>Home Phone</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <textarea name='phoneNumberHome' id='phoneNumberHome' type='number' size='10'></textarea><br><br>

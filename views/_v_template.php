@@ -72,9 +72,9 @@
 	<form action="http://www.google.com/search" method="get" onSubmit="Gsitesearch(this)" style = "position: absolute; top: 60px; left: 600px">
 		<div style = "border: 1px; color: blue; background-color: #CCCCFF; padding-left: 5px; padding-right: 5px; text-align: center">
 			Search this site using Google<br>
-			<input name="q" type="hidden"></input>
-			<input name="qfront" type="text" style="width: 180px"></input><br>
-			<input type="submit" value="Search on Bluerskies"></input>
+			<input name="q" type="hidden">
+			<input name="qfront" type="text" style="width: 180px"><br>
+			<input type="submit" value="Search on Bluerskies">
 		</div>
 	</form>
 

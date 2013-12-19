@@ -35,29 +35,29 @@
         <form>
 
             SIP address: <?=$contact['sip']?><br>
-            <span id="button_content"><a href="sip:<?=$contact['sip']?>">CALL</a></span><br><br>
+            <a href="sip:<?=$contact['sip']?>" id="button_content">CALL</a><br><br>
 
             Work Email: <?=$contact['emailWork']?><br>
-            <span id="button_content"><a href='/communicate/send_email/<?=$contact['emailWork']?>'>SEND EMAIL</a></span><br>
+            <a href='/communicate/send_email/<?=$contact['emailWork']?>' id="button_content">SEND EMAIL</a>&nbsp;&nbsp;&nbsp;
             <input type = "submit" name="records" onclick="mail_check(<?=$contact['emailWork']?>)" value ="Check DNS"></input><br>
 
             Home Email: <?=$contact['emailHome']?><br>
-            <span id="button_content"><a href='/communicate/send_email/<?=$contact['addressbook_id']?>'>SEND EMAIL</a></span><br>
+            <a href='/communicate/send_email/<?=$contact['addressbook_id']?>' id="button_content">SEND EMAIL</a>&nbsp;&nbsp;&nbsp;
             <input type = "submit" name="records" onclick="mail_check(<?=$contact['emailHome']?>)" value ="Check DNS"></input><br>
             <div style = "font-size: small; background-color: #CCFFFF; width: 115px">DNS lookup result:&nbsp;</div><div id = "mxRecordExists"></div><br>
 
             Work Phone: <?=$contact['phoneNumberWork']?>&nbsp;
-            <span id="button_content"><a href="tel:<?=$contact['phoneNumberWork']?>">CALL</a></span><br>
+            <a href="tel:<?=$contact['phoneNumberWork']?>" id="button_content">CALL</a><br>
 
             Home Phone: <?=$contact['phoneNumberHome']?>&nbsp;
-            <span id="button_content"><a href="tel:<?=$contact['phoneNumberHome']?>">CALL</a></span><br>
+            <a href="tel:<?=$contact['phoneNumberHome']?>" id="button_content">CALL</a><br>
 
             Mobile Phone: <?=$contact['mobilePhoneNumber']?><br>
-            <span id="button_content"><a href='/communicate/sendSMS/<?=$contact['addressbook_id']?>'>SEND SMS</a></span>&nbsp;
-            <span id="button_content"><a href="tel:<?=$contact['phoneNumberHome']?>">CALL</a></span><br><br>
+            <a href='/communicate/sendSMS/<?=$contact['addressbook_id']?>' id="button_content">SEND SMS</a>&nbsp;
+            <a href="tel:<?=$contact['phoneNumberHome']?>" id="button_content">CALL</a><br><br>
 
             Address:<br>
-            <?=$contact['physicalAddress']?><br>
+            <?=$contact['physicalAddress']?>
 
 
 

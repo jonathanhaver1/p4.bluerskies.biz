@@ -5,13 +5,14 @@
 
     <span style='align:center'><br>
 
-    <label for='topic'>What would you like to do (in 120 characters or less)?</label><br><br>
+        <label for='topic'>What would you like to do (in 120 characters or less)?</label><br><br>
 
-        <textarea name='topic' id='topic' type='text' rows='6' cols='45' max-length='120'></textarea><br><br>
+            <textarea name='topic' id='topic' type='text' rows='6' cols='45' max-length='120'></textarea><br><br>
 
-    <label for='priority'>What priority do you want to attach to it?<br>
-        1 = very low  o=====o  10 = very high</label><br><br>
-    <input name='priority' id='priority' type='number' max='10'></input><br><br>
+        <label for='priority'>What priority do you want to attach to it?<br>
+            1 = very low  o=====o  10 = very high</label><br><br>
+
+            <input name='priority' id='priority' type='number' min='1' max='10'></input><br><br>
 
     </span>
     
