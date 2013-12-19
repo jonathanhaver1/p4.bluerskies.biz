@@ -32,7 +32,10 @@ class addressbook_controller extends base_controller {
 
 		# Make sure none of the fields was left blank
 		# Array of fields
-		$submitted = array('first_name', 'last_name', 'email', 'interests', 'comments');
+		$submitted = array('first_name', 'last_name', 'emailHome', 'emailWork', 'sip',
+			'phoneNumberHome', 'phoneNumberWork', 'skype',
+			'mobilePhoneNumber', 'mobilePhoneCarrier',
+			'interests', 'comments');
 
 		# Loop through fields
 		$empty_field = false;
@@ -58,7 +61,11 @@ class addressbook_controller extends base_controller {
 			$_POST['created']  = Time::now();
 			$_POST['modified'] = Time::now();
 
-			if (check_email($POST_['email'])) {
+			if (!(filter_var($_POST['emailHome'], FILTER_VALIDATE_EMAIL) && (filter_var($_POST['emailWork'], FILTER_VALIDATE_EMAIL)))) {
+				$this->template->content = View::instance('v_error_incorrect_email');
+				$this->template->title = "Incorrect Email Address";
+				echo $this->template;
+			} else {
 			# Insert
 			# Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
 			DB::instance(DB_NAME)->insert('addressbook', $_POST);

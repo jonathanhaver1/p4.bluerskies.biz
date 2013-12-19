@@ -18,16 +18,18 @@ function Email(emailAddress, emailMessage) {
 
 // email sender
 
-function sendEmail(emailAddressString, emailMessageString) {
+function sendEmail(emailAddressString, emailMessageString, signature) {
 
   if (checkCharactersEmailAddress (emailAddressString)) {
-    var alertText = "Sending the email to :" + emailAddressString + ", message: " + emailMessageString
+    var alertText = "Sending the email to :" + emailAddressString
+                            + "\nmessage: " + emailMessageString
+                            + "\nsignature: " + signature
     alert(alertText)
 
     $.ajax({
     type: "POST",
       url: "sendEmail.php",
-      data: {emailAddressSend: emailAddressString, messageSend: emailMessageString},
+      data: {emailAddressSend: emailAddressString, messageSend: emailMessageString + " --- " + signature},
       cache: false,
       success: function(toAddress){
       alert ("Email to " + toAddress.toString() + " has been sent successfully")
@@ -45,7 +47,7 @@ function sendEmail(emailAddressString, emailMessageString) {
 
 function sendTextMessage() {
 
-  if (!isset(document.smsForm.phoneNumber) | !isset(document.smsForm.message)) | !isset(document.smsForm.carrier)) {
+  if (!isset(document.smsForm.phoneNumber) | !isset(document.smsForm.message) | !isset(document.smsForm.carrier)) {
     alert ("You did not fill in all the fields.\n\nPlease try again")
   } else {
 

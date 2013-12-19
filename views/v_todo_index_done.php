@@ -1,4 +1,4 @@
-<h2>DONEs</h2>
+<h2>List of done TO DOs</h2>
 
 <div id ="description">
     This is a list of the people you have already contacted.<br>

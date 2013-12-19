@@ -33,13 +33,13 @@
     <textarea name='sip' id='sip' type='text' size='30'></textarea><br>
     <span style = "color: navy; font-size: small; font-type: bold">The domain will be verified</span><br><br>
 
-    <label for='mobilePhoneNumber'>Home Phone</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for='phoneNumberHome'>Home Phone</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <textarea name='phoneNumberHome' id='phoneNumberHome' type='number' size='10'></textarea><br><br>
     
     <label for='phoneNumberWork'>Work Phone</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <textarea name='mobilePhoneNumber' id='phoneNumberWork' type='number' size='10'></textarea><br><br>
+    <textarea name='phoneNumberWork' id='phoneNumberWork' type='number' size='10'></textarea><br><br>
 
-    <label for='mobilePhoneNumber'>Skype name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for='skype'>Skype name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <textarea name='skype' id='skype' type='text' max-length='30'></textarea><br><br>
 
     <label for='mobilePhoneNumber'>Mobile Phone</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -47,6 +47,7 @@
 
     <label for='mobilePhoneCarrier'>Mobile Phone Carrier</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <select name="mobilePhoneCarrier" type= "text">
+                <option value = "">PLEASE SELECT
                 <option value = "US-T">T-Mobile
                 <option value = "US-Vi">Virgin Mobile
                 <option value = "US-C">Cingular

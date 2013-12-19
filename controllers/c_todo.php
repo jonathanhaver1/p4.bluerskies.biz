@@ -31,7 +31,8 @@ class todo_controller extends base_controller {
 
 		# Make sure none of the fields was left blank
 		# Array of fields
-		$submitted = array('first_name', 'last_name', 'email', 'interests', 'comments');
+		$submitted = array('first_name', 'last_name', 'emailHome', 'emailWork', 'sip',
+		 'phoneNumberHome', 'phoneNumberWork', 'mobilePhoneNumber', 'skype', 'interests', 'comments');
 
 		# Loop through fields
 		$empty_field = false;

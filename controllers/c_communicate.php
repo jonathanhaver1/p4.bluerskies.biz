@@ -11,17 +11,29 @@ class communicate_controller extends base_controller {
 		}
 	}
 
-	public function send_email($addressbook_id = null) {
+	public function send_email($emailAddress = null) {
 
 		# if not logged in -> redirect to the login page
 		if (!$this->user) {
 			Router::redirect('/users/login');
 		}
 
+		# Build signature
+    	$q = 'SELECT 
+    			users.user_id,
+            	users.first_name,
+            	users.last_name
+        		FROM users
+        		WHERE users.user_id = '.$this->user->user_id;
+
+		# Run the query
+		$name = DB::instance(DB_NAME)->select_row($q);
+
 		##Setup view
 		$this->template->content = View::instance('v_send_email');
 		$this->template->title = "Send an Email";
-		$this->template->content->addressbook_id = $addressbook_id;
+		$this->template->content->emailAddress = $emailAddress;
+		$this->template->content->name = $name['first_name'] . ' ' . $name['last_name'];
 
 		#Render template
 		echo $this->template;

@@ -41,16 +41,17 @@ TEST communication channels
 
 What aspects of the application are being managed by JavaScript
 
-DNS lookup (including AJAX)
-MX lookup (including AJAX)
+DNS lookup (via AJAX)
+MX lookup (via AJAX)
 Google search
 Skype status
-validation of email address
-validation of domain names
-send email
-send text message
-send test email
-send test text message
+validation of email address (menu item)
+validation of domain names (menu item)
+send email (via AJAX)
+send text message (via AJAX)
+send test email (via AJAX)
+send test text message (via AJAX)
+side bar menu
 
 -----
 

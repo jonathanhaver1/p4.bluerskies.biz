@@ -1,4 +1,4 @@
-<h2>TO DOs</h2>
+<h2>List of TO DOs</h2>
 
 <div id ="description">
     This is a list of people you need to contact.<br>

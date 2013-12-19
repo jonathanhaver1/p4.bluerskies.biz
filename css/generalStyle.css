@@ -12,8 +12,8 @@
 				margin-top:	20px;
 				margin-left: 20px;
 				background-image: url("css/ricepaper_v3");
-				//background-color: #FFFFFF;
 				background-repeat: repeat;
+				//background-color: #FFFFFF;
 			}
 
 			h1 {
@@ -341,11 +341,12 @@
 			}
 
 			#record {
+				position: absolute;
+			 	left: 280px;
+			 	width: 300px;
+			 	padding-left: 10px;
 			 	font-color: navy;
 			 	font-size: small;
-			 	margin-left: auto;
-			 	margin-right: auto;
-			 	width: 80%;
 			 	background-color: #FFFF66;
  			}
 

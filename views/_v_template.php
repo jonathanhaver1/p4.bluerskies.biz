@@ -6,18 +6,26 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" type="text/css" href="/css/generalStyle.css">
 
-	<!-- include Google search capability -->
-	<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+		<!-- include Google search capability -->
+		<script src="http://www.google.com/jsapi" type="text/javascript"></script>
 	
-			<!-- include jsquery for the side menu -->
+		<!-- include jsquery for the side menu -->
 		<script src="/js/jquery-1.10.2.min.js"></script>
+
+		<!-- include communication channel tests -->
 		<script src="/js/CommunicationTester.js"></script>
+
+		<!-- include communication tools -->
 		<script src="/js/Communicate.js"></script>
+
+		<!-- include Skype status -->
 		<script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script>
-	    	<script> 
-	    		$(function(){
-	      			$("#includeSideMenu").load("/libraries/menu_side.html"); 
-	    		});
+	    
+		<!-- include side menu -->
+	    <script> 
+	    	$(function(){
+	      		$("#includeSideMenu").load("/libraries/menu_side.html"); 
+	    	});
     	</script> 
 					
 	<!-- Controller Specific JS/CSS -->

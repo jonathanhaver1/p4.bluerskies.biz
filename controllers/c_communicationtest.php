@@ -41,6 +41,21 @@ class communicationtest_controller extends base_controller {
 		echo $this->template;
 	}
 
+	public function records() {
+
+		# if not logged in -> redirect to the login page
+		if (!$this->user) {
+			Router::redirect('/users/login');
+		}
+
+		##Setup view
+		$this->template->content = View::instance('v_communicationtest_records');
+		$this->template->title = "DNS & MX Records";
+
+		#Render template
+		echo $this->template;
+	}
+
 }
 
 ?>
