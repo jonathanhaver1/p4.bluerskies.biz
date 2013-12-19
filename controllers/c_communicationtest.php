@@ -26,7 +26,20 @@ class communicationtest_controller extends base_controller {
 		echo $this->template;
 	}
 
-	public function sms_test() {
+	public function send_sms($addressbook_id = null) {
+
+		// get mobile number from database
+		// get carrier from database
+    	$q = 'SELECT 
+    			addressbook.user_id,
+            	addressbook.mobilePhoneNumber,
+            	addressbook.mobilePhoneCarrier
+        		FROM addressbook
+        		WHERE addressbook.addressbook_id = '.$addressbook_id;
+
+		# Run the query
+		$mobilePhone = DB::instance(DB_NAME)->select_row($q);
+
 
 		# if not logged in -> redirect to the login page
 		if (!$this->user) {
@@ -35,7 +48,9 @@ class communicationtest_controller extends base_controller {
 
 		##Setup view
 		$this->template->content = View::instance('v_communicationtest_sms');
-		$this->template->title = "Test SMS";
+		$this->template->title = "Send a Text Message";
+		$this->template->content->mobilePhoneNumber = $mobilePhone['mobilePhoneNumber'];
+		$this->template->content->mobilePhoneCarrier = $mobilePhone['mobilePhoneCarrier']
 
 		#Render template
 		echo $this->template;

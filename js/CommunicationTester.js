@@ -115,7 +115,7 @@ function mx_lookup (domainName) {
 
   $.ajax({
     type: "POST",
-    url: "lookup_dns.php",
+    url: "/libraries/lookup_dns.php",
     data: {domainString: domainName.toString()}, 
     cache: false,
 
@@ -142,7 +142,7 @@ function dns_record (domainName) {
 
     $.ajax({
       type: "POST",
-      url: "dns_record_lookup.php",
+      url: "/libraries/dns_record_lookup.php",
       data: {domainString: dn}, 
       cache: false,
 
@@ -168,7 +168,7 @@ function mx_record (domainName) {
 
     $.ajax({
       type: "POST",
-      url: "mx_record_lookup.php",
+      url: "/libraries/mx_record_lookup.php",
       data: {domainString: dn}, 
       cache: false,
 
@@ -207,7 +207,7 @@ function sendTestEmail(emailAddressString, emailMessageString) {
 
     $.ajax({
     type: "POST",
-      url: "sendEmail.php",
+      url: "/libraries/sendEmail.php",
       data: {emailAddressSend: emailAddressString, messageSend: emailMessageString},
       cache: false,
       success: function(toAddress){

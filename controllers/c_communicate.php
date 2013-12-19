@@ -66,9 +66,6 @@ class communicate_controller extends base_controller {
 
 	public function send_sms($addressbook_id = null) {
 
-		// get mobile number from database
-		// get carrier from database
-
 		# if not logged in -> redirect to the login page
 		if (!$this->user) {
 			Router::redirect('/users/login');

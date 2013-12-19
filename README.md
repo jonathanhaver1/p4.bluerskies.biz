@@ -37,6 +37,20 @@ TEST communication channels
 - look up MX records
 - send test messages
 
+USER INPUT ERRORS
+The forms check that
+- no fields are left blank
+- email addresses are in the proper format
+- phone numbers contain no more than 10 digits
+- text fields are limited in size
+- users can check email addresses by looking up
+- - DNS records
+- - MX (DNS) records
+- users can check SIP addresses by looking up
+- - DNS records (SRV)
+- users can check mobile phones by sending
+- test text messages
+
 -----
 
 What aspects of the application are being managed by JavaScript
