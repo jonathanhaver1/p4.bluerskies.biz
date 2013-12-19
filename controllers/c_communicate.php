@@ -54,7 +54,10 @@ class communicate_controller extends base_controller {
 
 	public function send_sms($addressbook_id = null) {
 
-				# if not logged in -> redirect to the login page
+		// get mobile number from database
+		// get carrier from database
+
+		# if not logged in -> redirect to the login page
 		if (!$this->user) {
 			Router::redirect('/users/login');
 		}
@@ -62,19 +65,10 @@ class communicate_controller extends base_controller {
 		##Setup view
 		$this->template->content = View::instance('v_send_sms');
 		$this->template->title = "Send a Text Message";
-		$this->template->content->addressbook_id = $addressbook_id;
+		$this->template->content->mobilePhoneNumber = $addressbook_id;
 
 		#Render template
 		echo $this->template;
-	}
-
-	public function p_send_sms($addressbook_id = null) {
-
-		// get mobile number from database
-		// get carrier from database
-
-		Email(emailAddress, emailMessage);
-
 	}
 
 }

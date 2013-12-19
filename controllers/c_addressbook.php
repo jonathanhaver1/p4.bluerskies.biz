@@ -30,24 +30,44 @@ class addressbook_controller extends base_controller {
 
 	public function p_add() {
 
-		# Associate this friend with this user
-		$_POST['user_id']  = $this->user->user_id;
+		# Make sure none of the fields was left blank
+		# Array of fields
+		$submitted = array('first_name', 'last_name', 'email', 'interests', 'comments');
 
-		# Add a timestamp
-		$_POST['created']  = Time::now();
-		$_POST['modified'] = Time::now();
+		# Loop through fields
+		$empty_field = false;
+		foreach($submitted as $field) {
+  			if (empty($_POST[$field])) {
+    		$empty_field = true;
+  			}
+		}
 
-		if (check_email($POST_['email'])) {
-		# Insert
-		# Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
-		DB::instance(DB_NAME)->insert('addressbook', $_POST);
-
-		# Quick and dirty feedback
-
-			##Setup view
-			$this->template->content = View::instance('v_addressbook_added_successfully');
-			$this->template->title = "Success";
+		# if a fied has been left blank - alert user
+		if ($empty_field) {
+  			$this->template->content = View::instance('v_error_empty_fields');
+			$this->template->title = "Empty Fields";
 			echo $this->template;
+
+		# if all fields have been filled in
+		} else {
+
+			# Associate this friend with this user
+			$_POST['user_id']  = $this->user->user_id;
+
+			# Add a timestamp
+			$_POST['created']  = Time::now();
+			$_POST['modified'] = Time::now();
+
+			if (check_email($POST_['email'])) {
+			# Insert
+			# Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
+			DB::instance(DB_NAME)->insert('addressbook', $_POST);
+
+				##Setup view
+				$this->template->content = View::instance('v_addressbook_added_successfully');
+				$this->template->title = "Success";
+				echo $this->template;
+			}
 		}
 	}
 

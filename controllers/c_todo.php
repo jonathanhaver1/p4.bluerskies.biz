@@ -29,22 +29,44 @@ class todo_controller extends base_controller {
 
 	public function p_add($addressbook_id = null) {
 
-		# Associate this todo entry with this user
-		$_POST['user_id']  = $this->user->user_id;
+		# Make sure none of the fields was left blank
+		# Array of fields
+		$submitted = array('first_name', 'last_name', 'email', 'interests', 'comments');
 
-		# Unix timestamp of when this post was created / modified
-		$_POST['created']  = Time::now();
-		$_POST['modified'] = Time::now();
+		# Loop through fields
+		$empty_field = false;
+		foreach($submitted as $field) {
+  			if (empty($_POST[$field])) {
+    		$empty_field = true;
+  			}
+		}
 
-		$_POST['addressbook_id'] = $addressbook_id;
+		# if a fied has been left blank - alert user
+		if ($empty_field) {
+  			$this->template->content = View::instance('v_error_empty_fields');
+			$this->template->title = "Empty Fields";
+			echo $this->template;
 
-		# Insert into database
-		DB::instance(DB_NAME)->insert('todo', $_POST);
+		# if all fields have been filled in
+		} else {
 
-		# Setup view
-		$this->template->content = View::instance('v_todo_added_successfully');
-		$this->template->title = "Success";
-		echo $this->template;
+			# Associate this todo entry with this user
+			$_POST['user_id']  = $this->user->user_id;
+
+			# Unix timestamp of when this post was created / modified
+			$_POST['created']  = Time::now();
+			$_POST['modified'] = Time::now();
+
+			$_POST['addressbook_id'] = $addressbook_id;
+
+			# Insert into database
+			DB::instance(DB_NAME)->insert('todo', $_POST);
+
+			# Setup view
+			$this->template->content = View::instance('v_todo_added_successfully');
+			$this->template->title = "Success";
+			echo $this->template;
+		}
 	}
 
 	public function done($todo_id = null) {

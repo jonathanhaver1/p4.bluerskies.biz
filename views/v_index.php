@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Welcome new Users</title>
-</head>
-<body>
-
 <h1>
-	Welcome to BluerSkies<?php if($user) echo ', '.$user->first_name; ?></h1>
+	Welcome to BluerSkies<?php if($user) echo ', '.$user->first_name; ?>
 </h1>
 
-<body>
 
 	<div id="special_features">
 		<br>
@@ -40,19 +32,6 @@
 		}
 
 	</script>
-
-
-
-	<form action="http://www.google.com/search" method="get" onSubmit="Gsitesearch(this)" style = "position: absolute; top: 60px; left: 600px">
-		<div style = "border: 1px; color: blue; background-color: #CCCCFF; padding-left: 5px; padding-right: 5px; text-align: center">
-			Search this site using Google<br>
-			<input name="q" type="hidden"></input>
-			<input name="qfront" type="text" style="width: 180px"></input><br>
-			<input type="submit" value="Search on Bluerskies"></input>
-		</div>
-	</form>
-
-
 
 		<!-- main menu on left side !-->
      	<div id="includeSideMenu"></div>
