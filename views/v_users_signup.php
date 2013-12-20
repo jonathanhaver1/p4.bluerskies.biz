@@ -1,18 +1,15 @@
-
 <div id = "special_features" style = "margin-left:200px; margin-top: 130px; width:150px;">
 
-Please login to explore all the great things on this site.<br>
-If you have not yet signed in, go to Sign in below.
+	Please login to explore all the great things on this site.<br>
+	If you have not yet signed up, go to Sign Up below.
 
 </div>
-
-
 
 <br><br><br><br>
 
 <form method = 'POST' id = "form_profile" action='/users/p_signup'>
 
-	    <span style = "color: navy; font-size: small; font-type: bold">Do not leave a field blank</span><br><br>
+	<span style = "color: navy; font-size: small; font-type: bold">Do not leave a field blank</span><br><br>
 
 	First Name<br>
 	<input type = 'text' name = 'first_name'>
@@ -34,14 +31,12 @@ If you have not yet signed in, go to Sign in below.
 
 </form>
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-    <br><br>
- <br><br> <br><br> <br><br> <br><br> <br><br>
- <br><br><br>
-    <div id="menu_horizontal">
-            <ul>
-                <li><a href="/users/signup">Signup</a></li>
-                <li><a href="index">Home</a></li>
-                <li><a href="htp://www.google.com">Google</a></li>
-            </ul>
-    </div>
+<div id="menu_horizontal">
+        <ul>
+            <li><a href="/users/signup">Sign Up</a></li>
+            <li><a href="index">Home</a></li>
+            <li><a href="htp://www.google.com">Google</a></li>
+        </ul>
+</div>

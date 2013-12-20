@@ -6,7 +6,7 @@
 			if you have <u>activated</u> this service with your carrier<br><br>
 		</span>
 
-				<div style = "margin-top: 150px"></span>
+		<div style = "margin-top: 150px"></div>
 
 		<form name="smsForm" method="post" action="#" onSubmit="return sendTextMessage()" style = "position: absolute; left:345px; text-align: center">
 

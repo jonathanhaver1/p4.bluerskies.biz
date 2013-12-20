@@ -1,3 +1,13 @@
+/***
+*
+*     These functions are used for active user communication
+*     via EMAIL and SMS
+*
+*     Author: Christian Jonathan Haverkampf
+*
+***/
+
+
 //------------------------------------------------------------------------------------
 //--------------------------- SEND EMAIL ---------------------------------------------
 

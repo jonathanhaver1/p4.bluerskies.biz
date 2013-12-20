@@ -1,5 +1,8 @@
 <?php
 
+/*
+*	COMMUNICATION TEST FEATURES
+*/
 class communicationtest_controller extends base_controller {
 
 	public function _construct() {
@@ -11,6 +14,9 @@ class communicationtest_controller extends base_controller {
 		}
 	}
 
+	/*
+	*	TEST EMAIL
+	*/
 	public function email_test() {
 
 		# if not logged in -> redirect to the login page
@@ -26,6 +32,9 @@ class communicationtest_controller extends base_controller {
 		echo $this->template;
 	}
 
+	/*
+	*	ACCESS DNS & MX RECORDS
+	*/
 	public function records() {
 
 		# if not logged in -> redirect to the login page

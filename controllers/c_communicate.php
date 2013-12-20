@@ -1,5 +1,8 @@
 <?php
 
+/*
+*	COMMUNICATION FEATURES
+*/
 class communicate_controller extends base_controller {
 
 	public function _construct() {
@@ -11,6 +14,9 @@ class communicate_controller extends base_controller {
 		}
 	}
 
+	/*
+	*	SEND AN EMAIL
+	*/
 	public function send_email($emailAddress = null) {
 
 		# if not logged in -> redirect to the login page
@@ -41,6 +47,9 @@ class communicate_controller extends base_controller {
 	}
 
 
+	/*
+	*	SEND A TEXT MESSAGE
+	*/
 	public function send_sms($addressbook_id = null) {
 
 		# if not logged in -> redirect to the login page

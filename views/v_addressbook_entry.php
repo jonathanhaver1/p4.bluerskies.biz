@@ -1,68 +1,68 @@
-        <!-- determine Skype status -->
-        <script>
-            function getSkypeStatus(skypeId,iconType,skypeEvent,statusShowId){
-                 var image = new Image()
-                 $(image).attr('src','http://mystatus.skype.com/'+iconType+'/'+skypeId);
-                 var src = $(image).attr('src');
-                 var html = skypeId +  '<a href="skype:'+skypeId+'?'+skypeEvent+'" onclick="return skypeCheck();"><img src="'+src+'" border="0"></a>';
-                 $('#show_status_1').append(html);
-            }
+<!-- determine Skype status -->
+<script>
+    function getSkypeStatus(skypeId,iconType,skypeEvent,statusShowId){
+         var image = new Image()
+         $(image).attr('src','http://mystatus.skype.com/'+iconType+'/'+skypeId);
+         var src = $(image).attr('src');
+         var html = skypeId +  '<a href="skype:'+skypeId+'?'+skypeEvent+'" onclick="return skypeCheck();"><img src="'+src+'" border="0"></a>';
+         $('#show_status_1').append(html);
+    }
 
-            $(function() { getSkypeStatus
-                ('<?=$contact['skype']?>','smallicon','chat','show_status_1');
-            });
-        </script>
-
-
-        <h2><?=$contact['first_name']?> <?=$contact['last_name']?></h2>
-
-        <div id ="description">
-        Below are the details for <?=$contact['first_name']?> <?=$contact['last_name']?><br><br>
-        </div>
-
-        <br><br><br><br><br><br><br>
+    $(function() { getSkypeStatus
+        ('<?=$contact['skype']?>','smallicon','chat','show_status_1');
+    });
+</script>
 
 
-        <article>
+<h2><?=$contact['first_name']?> <?=$contact['last_name']?></h2>
 
-        <span id="addressbook_name"><?=$contact['first_name']?> <?=$contact['last_name']?></span><br>
-                <a href='/todo/add/<?=$contact['addressbook_id']?>' id="button_content" style ="background-color: pink">Add a To Do</a></span><br><br>
-                Skype Status: <div id='show_status_1'></div><br>
+<div id ="description">
+Below are the details for <?=$contact['first_name']?> <?=$contact['last_name']?><br><br>
+</div>
 
-        on the list since: 
-        <time datetime="<?=Time::display($contact['modified'],'Y-m-d G:i')?>">
-                <?=Time::display($contact['modified'])?><br>
-        </time><br>
-        <form>
+<br><br><br><br><br><br><br>
 
-            SIP address: <?=$contact['sip']?><br>
-            <a href="sip:<?=$contact['sip']?>" id="button_content">CALL</a><br><br>
+<article>
 
-            Work Email: <?=$contact['emailWork']?><br>
-            <a href='/communicate/send_email/<?=$contact['emailWork']?>' id="button_content">SEND EMAIL</a>&nbsp;&nbsp;&nbsp;
-            <button type = "button" name="Button" onclick='mx_lookup_button("<?=$contact['emailWork']?>")' value ="Check DNS">Check DNS</button><br>
+    <span id="addressbook_name"><?=$contact['first_name']?> <?=$contact['last_name']?></span><br>
+            <a href='/todo/add/<?=$contact['addressbook_id']?>' id="button_content" style ="background-color: pink">Add a To Do</a></span><br><br>
+            Skype Status: <div id='show_status_1'></div><br>
 
-            Home Email: <?=$contact['emailHome']?><br>
-            <a href='/communicate/send_email/<?=$contact['emailHome']?>' id="button_content">SEND EMAIL</a>&nbsp;&nbsp;&nbsp;
-            <button type = "button" name="Button" onclick='mx_lookup_button("<?=$contact['emailHome']?>")' value ="Check DNS">Check DNS</button><br>
-            <div style = "font-size: small; background-color: #CCFFFF; width: 115px">DNS lookup result:&nbsp;</div><div id = "mxRecordExists"></div><br>
+    on the list since: 
+    <time datetime="<?=Time::display($contact['modified'],'Y-m-d G:i')?>">
+            <?=Time::display($contact['modified'])?><br>
+    </time><br>
+    
+    <form>
 
-            Work Phone: <?=$contact['phoneNumberWork']?>&nbsp;
-            <a href="tel:<?=$contact['phoneNumberWork']?>" id="button_content">CALL</a><br>
+        SIP address: <?=$contact['sip']?><br>
+        <a href="sip:<?=$contact['sip']?>" id="button_content">CALL</a><br><br>
 
-            Home Phone: <?=$contact['phoneNumberHome']?>&nbsp;
-            <a href="tel:<?=$contact['phoneNumberHome']?>" id="button_content">CALL</a><br>
+        Work Email: <?=$contact['emailWork']?><br>
+        <a href='/communicate/send_email/<?=$contact['emailWork']?>' id="button_content">SEND EMAIL</a>&nbsp;&nbsp;&nbsp;
+        <button type = "button" name="Button" onclick='mx_lookup_button("<?=$contact['emailWork']?>")' value ="Check DNS">Check DNS</button><br>
 
-            Mobile Phone: <?=$contact['mobilePhoneNumber']?><br>
-            <a href='/communicate/send_sms/<?=$contact['addressbook_id']?>' id="button_content">SEND SMS</a>&nbsp;
-            <a href="tel:<?=$contact['phoneNumberHome']?>" id="button_content">CALL</a><br><br>
+        Home Email: <?=$contact['emailHome']?><br>
+        <a href='/communicate/send_email/<?=$contact['emailHome']?>' id="button_content">SEND EMAIL</a>&nbsp;&nbsp;&nbsp;
+        <button type = "button" name="Button" onclick='mx_lookup_button("<?=$contact['emailHome']?>")' value ="Check DNS">Check DNS</button><br>
+        <div style = "font-size: small; background-color: #CCFFFF; width: 115px">DNS lookup result:&nbsp;</div><div id = "mxRecordExists"></div><br>
 
-            Address:<br>
-            <?=$contact['physicalAddress']?>
+        Work Phone: <?=$contact['phoneNumberWork']?>&nbsp;
+        <a href="tel:<?=$contact['phoneNumberWork']?>" id="button_content">CALL</a><br>
 
-        </form><br>
+        Home Phone: <?=$contact['phoneNumberHome']?>&nbsp;
+        <a href="tel:<?=$contact['phoneNumberHome']?>" id="button_content">CALL</a><br>
 
-    </article>
+        Mobile Phone: <?=$contact['mobilePhoneNumber']?><br>
+        <a href='/communicate/send_sms/<?=$contact['addressbook_id']?>' id="button_content">SEND SMS</a>&nbsp;
+        <a href="tel:<?=$contact['phoneNumberHome']?>" id="button_content">CALL</a><br><br>
+
+        Address:<br>
+        <?=$contact['physicalAddress']?>
+
+    </form><br>
+
+</article>
 
 <!-- main menu on left side !-->
 <div id="includeSideMenu"></div>

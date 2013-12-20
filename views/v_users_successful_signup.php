@@ -1,12 +1,14 @@
 <h2>Welcome!</h2>
-<br><br><br>
-You are signed up.
-<br><br>
-I hope you will make use of all the really cool stuff this platform offers.
-<br><br>
 
+<br><br><br>
+
+You are signed up.<br><br>
+
+Now you have a better way to stay in touch with your contacts.<br><br>
 
 <div id = "special_features">
-You need to sign in know make use of all the really cool stuff this platform offers.<br>
-Go to "Sign In"
+
+	You need to log in now to add addressbook entries and get in touch with your contacts.<br>
+	Go to "Log In"
+	
 </div>

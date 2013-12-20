@@ -17,16 +17,16 @@ class addressbook_controller extends base_controller {
 		# Registered users only
 		if (!$this->user) {
 			Router::redirect('/users/login');
-	}
+		}
 
-	##Setup view
-	$this->template->content = View::instance('v_addressbook_add');
-	$this->template->title = "Add a new contact";
+		##Setup view
+		$this->template->content = View::instance('v_addressbook_add');
+		$this->template->title = "Add a new contact";
 
-	#Render template
-	echo $this->template;
+		#Render template
+		echo $this->template;
 
-	}
+		}
 
 	public function p_add() {
 
@@ -42,7 +42,8 @@ class addressbook_controller extends base_controller {
     		$empty_field = true;
   			}
 		}
-		# if a fied has been left blank - alert user
+
+		# if a fied has been left blank -> alert user
 		if ($empty_field) {
   			$this->template->content = View::instance('v_error_empty_fields');
 			$this->template->title = "Empty Fields";
@@ -57,7 +58,7 @@ class addressbook_controller extends base_controller {
 				$this->template->title = "Incorrect Email Address";
 				echo $this->template;
 
-		# if those two tests have been passed
+		# if those two tests have been passed insert the new contact into the database
 		} else {
 
 			# Associate this friend with this user
@@ -67,8 +68,7 @@ class addressbook_controller extends base_controller {
 			$_POST['created']  = Time::now();
 			$_POST['modified'] = Time::now();
 
-			# Insert
-			# Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
+			# Insert (sanitizes automatically)
 			DB::instance(DB_NAME)->insert('addressbook', $_POST);
 
 				##Setup view
@@ -144,7 +144,6 @@ class addressbook_controller extends base_controller {
 			echo $this->template;
 		}
 	}
-
 
 }
 

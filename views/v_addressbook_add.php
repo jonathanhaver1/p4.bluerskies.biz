@@ -6,14 +6,10 @@
 </div>
 
 
-<form id = "form_profile" method='POST' action='/addressbook/p_add' style='padding-left: 15px; padding-right: 15px'>
+<form id = "form_profile" method='POST' action='/addressbook/p_add' style='padding-left: 15px; padding-right: 15px; align:center'>
 
-	<span style='align:center'>
-
-    <br>
-    Please enter the new contact's details.<br>
-    <span style = "color: navy; font-size: small; font-type: bold; background-color: #FFCCFF">Do not leave a field blank</span>
-    <br><br><br>
+    <br>Please enter the new contact's details.<br>
+    <span style = "color: navy; font-size: small; font-type: bold; background-color: #FFCCFF">Do not leave a field blank</span><br><br><br>
 
     <label for='first_name'>First Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input name='first_name' id='first_name' type='text' size='15'><br><br>
@@ -36,13 +32,13 @@
                                                                     Verify the domain under <u>DNS/MX RECORDS</u></span><br><br>
 
     <label for='phoneNumberHome'>Home Phone</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input name='phoneNumberHome' id='phoneNumberHome' type='number' min='001' max='999999999999999'><br>
+    <input name='phoneNumberHome' id='phoneNumberHome' type='number' min='10000' max='999999999999999'><br>
     
     <label for='phoneNumberWork'>Work Phone</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input name='phoneNumberWork' id='phoneNumberWork' type='number' min='001' max='999999999999999'><br>
+    <input name='phoneNumberWork' id='phoneNumberWork' type='number' min='10000' max='999999999999999'><br>
 
     <label for='mobilePhoneNumber'>Mobile Phone</label>&nbsp;&nbsp;&nbsp;
-    <input name='mobilePhoneNumber' id='mobilePhoneNumber' type='number' min='001' max='999999999999999'><br>
+    <input name='mobilePhoneNumber' id='mobilePhoneNumber' type='number' min='10000' max='999999999999999'><br>
     <span style = "color: navy; font-size: small; font-type: bold">up to 15 digits<br>include country code</span><br><br>
 
     <label for='skype'>Skype name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -67,19 +63,14 @@
     <textarea name='interests' id='interests' type='text' rows='4' cols='30'></textarea><br><br>
 
     <label for='comments'>Comments:</label><br>
-    <textarea name='comments' id='comments' type='text' rows='8' cols='30'></textarea><br><br>
+    <textarea name='comments' id='comments' type='text' rows='8' cols='30'></textarea><br><br><br>
 
-    <br>
-
-</span>
-    <input type='submit' value='Add Contact'>
-
-    <br><br>
+    <input type='submit' value='Add Contact'><br><br>
 
 </form> 
 
-        <!-- main menu on left side !-->
-        <div id="includeSideMenu"></div>
+<!-- main menu on left side !-->
+<div id="includeSideMenu"></div>
 
 
 <div id = "comment_box_right">
@@ -90,4 +81,4 @@
     Skype<br>
     text message<br>
     SIP<br>
-    </div>
+</div>

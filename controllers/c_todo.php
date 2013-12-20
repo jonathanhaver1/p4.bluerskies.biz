@@ -1,5 +1,8 @@
 <?php
 
+/*
+*	MAINTAIN A TO DO LIST
+*/
 class todo_controller extends base_controller {
 
 	public function _construct() {
@@ -11,6 +14,9 @@ class todo_controller extends base_controller {
 		}
 	}
 
+	/*
+	*	ADD A TO DO
+	*/
 	public function add($addressbook_id = null) {
 
 		# if not logged in -> redirect to the login page
@@ -27,12 +33,13 @@ class todo_controller extends base_controller {
 		echo $this->template;
 	}
 
+	/*
+	*	PROCESS THE ADDING OF A TO DO
+	*/
 	public function p_add($addressbook_id = null) {
 
 		# Make sure none of the fields was left blank
-		# Array of fields
 		$submitted = array('topic','priority');
-
 		# Loop through fields
 		$empty_field = false;
 		foreach($submitted as $field) {
@@ -43,6 +50,7 @@ class todo_controller extends base_controller {
 
 		# if a fied has been left blank - alert user
 		if ($empty_field) {
+
   			$this->template->content = View::instance('v_error_empty_fields');
 			$this->template->title = "Empty Fields";
 			echo $this->template;
@@ -69,6 +77,9 @@ class todo_controller extends base_controller {
 		}
 	}
 
+	/*
+	*	CONVERT A TO DO INTO A DONE
+	*/
 	public function done($todo_id = null) {
 
 		# update the database
@@ -79,7 +90,10 @@ class todo_controller extends base_controller {
 		Router::redirect("/todo/index_todo");
 	}
 
-		public function not_done($todo_id = null) {
+	/*
+	*	CONVERT A DONE INTO A TO DO
+	*/
+	public function not_done($todo_id = null) {
 
 		# update the database
 		$data = Array("done" => "0");
@@ -89,7 +103,9 @@ class todo_controller extends base_controller {
 		Router::redirect("/todo/index_done");
 	}
 
-
+	/*
+	*	DISPLAY THE TO DO'S
+	*/
 	public function index_todo() {
 
 		# if not logged in -> redirect to the login page
@@ -126,12 +142,23 @@ class todo_controller extends base_controller {
 
 		$todos = DB::instance(DB_NAME)->select_rows($q);
 
+		# if list is empty display a message
+		if (empty($todos)) {
+			$messageEmpty = "Your list is empty - add TO DOs via the main menu";
+		} else {
+			$messageEmpty = " ";
+		}
+
 		# Pass data to the View and render the View
 		$this->template->content->todos = $todos;
+		$this->template->content->messageEmpty = $messageEmpty;		
 		echo $this->template;
 	}
 
-		public function index_done() {
+	/*
+	*	DISPLAY THE DONE'S
+	*/
+	public function index_done() {
 
 		# if not logged in -> redirect to the login page
 		if (!$this->user) {
@@ -155,18 +182,28 @@ class todo_controller extends base_controller {
 		            addressbook.last_name
 		        FROM todo
 		        INNER JOIN addressbook
-		            ON todo.addressbook_id = todo.addressbook_id
+		            ON todo.addressbook_id = addressbook.addressbook_id
 		        WHERE todo.done = '1'
 		        AND todo.user_id = ".$this->user->user_id;
 
 		$todos = DB::instance(DB_NAME)->select_rows($q);
 
+		if (empty($todos)) {
+			$messageEmpty = "Your list is empty - add TO DOs via the main menu";
+		} else {
+			$messageEmpty = " ";
+		}
+
 		# Pass data to the View and render the View
 		$this->template->content->todos = $todos;
+		$this->template->content->messageEmpty = $messageEmpty;
 		echo $this->template;
 	}
 
-		public function priority_increase ($todo_id = null) {
+	/*
+	*	INCREMENT THE PRIORITY OF A TO DO BY ONE
+	*/
+	public function priority_increase ($todo_id = null) {
 
 		# get current priority information from database
    		$q = 'SELECT 
@@ -186,7 +223,10 @@ class todo_controller extends base_controller {
 		Router::redirect("/todo/index_todo");
 	}
 
-		public function priority_decrease ($todo_id = null) {
+	/*
+	*	DECREMENT THE PRIORITY OF A TO DO BY ONE
+	*/
+	public function priority_decrease ($todo_id = null) {
 
 		# get current priority information from database
    		$q = 'SELECT 

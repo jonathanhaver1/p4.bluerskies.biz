@@ -18,7 +18,9 @@
 
 			</form>
 
-			<span style ="color: navy; font:bold 16px Georgia, serif;">This is the record I retrieved:</span><br><br>
+			<span style ="color: navy; font:bold 16px Georgia, serif;">
+				This is the record I retrieved:
+			</span><br><br>
 
 			<div id = "record" style ="width:700px"><br>
 				<u>NO RECORDS TO DISPLAY</u><br>

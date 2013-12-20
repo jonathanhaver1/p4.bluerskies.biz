@@ -5,7 +5,7 @@
 		<span id = "description">This module checks the syntax of an email address, extracts the domain,
 			displays the domain on the line below the button,
 			and then looks up the domain in the mail server mx record
-			to make sure it is a valid email address which can be reached.</span><span><br><br>
+			to make sure it is a valid email address which can be reached.</span><br><br>
 		
 		<form name="emailForm" method="post" action="#" id ="form_communicationtest" style = "position: absolute; top: 350px"><br>
 
@@ -21,6 +21,7 @@
 
 		<span style ="color: navy; font:bold 16px Georgia, serif">= DOMAIN =</span><br>
 			<div id = "domainName">Please enter an email address<br>and click 'Check Address'</div><br>
+			
 		<span style ="color: navy; font:bold 16px Georgia, serif;" >= IS THERE A DNS RECORD? =</span><br>
 			<div id = "mxRecordExists">Please enter an email address<br>and click 'Check Address'</div>
 

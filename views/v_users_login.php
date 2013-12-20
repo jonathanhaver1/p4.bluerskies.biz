@@ -1,9 +1,7 @@
-
-
 <div id = "special_features" style = "margin-left:200px; margin-top: 130px; width:150px;">
 
-Please login to explore all the great things on this site.<br>
-If you have not yet signed in, go to Sign in below.
+	Please login to explore all the great things on this site.<br>
+	If you have not yet signed in, go to Sign in below.
 
 </div>
 
@@ -11,18 +9,13 @@ If you have not yet signed in, go to Sign in below.
 
 <form method='POST' id = "form_profile" action='/users/p_login'>
 
-	    <span style = "color: navy; font-size: small; font-type: bold">Do not leave a field blank</span><br>
+	<span style = "color: navy; font-size: small; font-type: bold">Do not leave a field blank</span><br><br>
 
-	<br>
 	Email<br>
-	<input type ='text' name ='email'>
-
-	<br><br>
+	<input type ='text' name ='email'><br><br>
 
 	Password<br>
-	<input type ='password' name = 'password'>
-
-	<br><br>
+	<input type ='password' name = 'password'><br><br>
 
 	<?php if(isset($error)): ?>
 		<div class='error'>
@@ -31,16 +24,16 @@ If you have not yet signed in, go to Sign in below.
 		<br>
 	<?php endif; ?>
 
-	<input type = 'submit' value = 'LogIn'>
-	<br><br>
+	<input type = 'submit' value = 'LogIn'><br><br>
 
 </form>
 
- <br><br> <br><br> <br><br>
-    <div id="menu_horizontal">
-            <ul>
-                <li><a href="/users/signup">Signup</a></li>
-                <li><a href="/">Home</a></li>
-                <li><a href="htp://www.google.com">Google</a></li>
-            </ul>
-    </div>
+<br><br> <br><br> <br><br>
+
+<div id="menu_horizontal">
+        <ul>
+            <li><a href="/users/signup">Signup</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="htp://www.google.com">Google</a></li>
+        </ul>
+</div>

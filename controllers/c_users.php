@@ -15,9 +15,9 @@ class users_controller extends base_controller {
 		}
 	}
 
-	/**
+	/*
 	* Add a new user
-	**/
+	*/
 	public function signup() {
 		
 		##Setup view
@@ -28,12 +28,13 @@ class users_controller extends base_controller {
 		echo $this->template;
 	}
 
+	/*
+	*	PROCESS THE SIGNUP OF A NEW USER
+	*/
 	public function p_signup() {
 
 		# Make sure none of the fields was left blank
-		# Array of fields
 		$submitted = array('first_name', 'last_name', 'email', 'password');
-
 		# Loop through fields
 		$empty_field = false;
 		foreach($submitted as $field) {
@@ -89,6 +90,9 @@ class users_controller extends base_controller {
 		}
 	}
 
+	/*
+	*	PROVIDE USER LOGIN
+	*/
 	public function login($error = NULL) {
 
 		#Set up view
@@ -100,6 +104,9 @@ class users_controller extends base_controller {
 		echo $this->template;
 	}
 
+	/*
+	*	PROCESS USER LOGIN
+	*/
 	public function p_login() {
 
 		# Make sure none of the fields was left blank
@@ -152,9 +159,9 @@ class users_controller extends base_controller {
 		}
 	}
 
-	/**
-	* Logout a registered user
-	**/
+	/*
+	*	LOGOUT A USER
+	*/
 	public function logout() {
 
 		# Generate and save a new token for the next login

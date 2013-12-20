@@ -1,7 +1,17 @@
-/*
-* The JavaScript and Jquery functions
-* to support the Communication Tester
-*/
+/***
+*
+*     These functions are used to test communication
+*     via EMAIL and SMS
+*
+*     1. EMAIL SYNTAX AND CHARACTER CHECK
+*     2. DOMAIN NAME SYNTAX AND CHARACTER CHECK
+*     3. MX LOOKUP
+*     4. RETURN DNS & MX RECORDS
+*     5. FORMAT DNS & MX RECORDS
+*
+*     Author: Christian Jonathan Haverkampf
+*
+***/
 
 //-------------------------------------------------------------------------------------
 //----------------------- EMAIL SYNTAX AND CHARACTER CHECK ----------------------------
@@ -54,11 +64,12 @@ function checkSyntax(){
   }
 }
 
+// check the syntax of an email only
+
   function mail_check(emailAddress) {
 
     var email = document.emailForm.emailAddress
     var emailString = email.value
-
 
   if (email.value == null) {
 
@@ -107,7 +118,10 @@ function checkDomainName (domainName) {
 }
 
 //-------------------------------------------------------------------------------------
-//----------------------- MX LLOKUP ---------------------------------------------------
+//----------------------- MX LOOKUP ---------------------------------------------------
+
+
+// MX lookup -> result on html page
 
 function mx_lookup (domainName) {
 
@@ -127,13 +141,14 @@ function mx_lookup (domainName) {
     });
 }
 
+// extract domain + MX lookup -> result on html page + alert box
 
 function mx_lookup_button (email) {
 
-      // extract domain
+    // extract domain
     var emailDomain = email.replace(/.*@/, "")
 
-      mx_lookup (emailDomain)
+    mx_lookup (emailDomain)
 
   $.ajax({
     type: "POST",
@@ -149,7 +164,7 @@ function mx_lookup_button (email) {
 
 
 //------------------------------------------------------------------------------------
-//----------------------- RECORDS ----------------------------------------------------
+//---------------------- RETURN DNS & MX RECORDS -------------------------------------
 
 
 function dns_record (domainName) {
@@ -159,7 +174,6 @@ function dns_record (domainName) {
   if (checkDomainName (dn)) {
 
     alert("Looking up the DNS record for "+ dn)
-
 
     $.ajax({
       type: "POST",
@@ -207,7 +221,7 @@ function mx_record (domainName) {
 
 
 //----------------------------------------------------------------------
-//--------------- beautify DNS and MX records --------------------------
+//------------------- FORMAT DNS & MX RECORDS --------------------------
 
 
 function beautifyRecords (stringResponse) {

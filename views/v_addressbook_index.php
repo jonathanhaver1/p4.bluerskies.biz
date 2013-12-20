@@ -13,9 +13,10 @@
 
     <article>
 
-        <span id="addressbook_name"><a href = '/addressbook/entry/<?=$contact['addressbook_id']?>'><?=$contact['first_name']?> <?=$contact['last_name']?></span><br>
-
-        <br>
+        <span id="addressbook_name">
+            <a href = '/addressbook/entry/<?=$contact['addressbook_id']?>'>
+            <?=$contact['first_name']?> <?=$contact['last_name']?>
+        </span><br><br>
 
     </article>
 
