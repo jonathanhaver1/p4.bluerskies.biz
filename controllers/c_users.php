@@ -171,56 +171,6 @@ class users_controller extends base_controller {
 		Router::redirect("/");
 	}
 
-	/**
-	* Display the profile of a registered user
-	**/
-	public function profile() {
-		# if not logged in -> redirect to the login page
-		if (!$this->user) {
-			Router::redirect('/users/login');
-		}
-
-		# Query whehther Profile exists
-		$q = "	SELECT profile_id
-				FROM user_profiles
-				WHERE user_id = ".$this->user->user_id;
-		$profile_exists = DB::instance(DB_NAME)->select_field($q);
-
-		# If the user does not have a profile display 'Sorry No Profile'
-		if (!$profile_exists) {
-				$this->template->content = View::instance('v_users_no_profile');
-				$this->template->title = "No Profile";
-
-				# Render the View
-				echo $this->template;
-			} else {
-				# if the user has a profile
-
-			# if logged in -> Setup view
-			$this->template->content = View::instance('v_profiles_display');
-			$this->template->title = "Your Profile";
-
-			# Query for user profile information
-			$q = '	SELECT 
-						user_profiles.city,
-						user_profiles.country,
-						user_profiles.interests,
-						user_profiles.birthyear,
-						user_profiles.profile_id,
-						users.first_name,
-						users.last_name
-					FROM user_profiles
-					JOIN users ON
-						user_profiles.user_id = users.user_id 
-					WHERE user_profiles.user_id = '.$this->user->user_id;
-
-			$profile = DB::instance(DB_NAME)->select_row($q);
-
-			# Pass data to the View and render it
-			$this->template->content->profile = $profile;
-			echo $this->template;
-		}
-	}
 }
 
 ?>

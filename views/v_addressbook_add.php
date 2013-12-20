@@ -42,6 +42,9 @@
     <label for='skype'>Skype name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <textarea name='skype' id='skype' type='text' max-length='30'></textarea><br><br>
 
+    <label for='physicalAddress'>Address</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <textarea name='physical Address' id='physicalAddress' type='text' rows ='2' cols = '20'></textarea><br><br>
+
     <label for='mobilePhoneNumber'>Mobile Phone</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <textarea name='mobilePhoneNumber' id='mobilePhoneNumber' type='number' size='10'></textarea><br><br>
 

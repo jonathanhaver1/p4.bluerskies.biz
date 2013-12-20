@@ -31,5 +31,3 @@
 			The mail exchange (<u>MX</u>) record within the DNS specifies the mail server<br>
 			responsible for accepting (SMTP) email messages on behalf of a recipient's domain.<br>
 			A domain may exist but still have a null MX record if it is not intended to receive mail.<br><br>
-			If you want to see the MX or DNS records click one of the following:<br><br>
-	

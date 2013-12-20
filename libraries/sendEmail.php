@@ -8,9 +8,10 @@
 
     $toAddress = $_POST['emailAddressSend'];
     $message = $_POST['messageSend'];
+    $subject = $_POST['subject'];
 
 	//send email
-    mail($toAddress, "", $message);
+    mail($toAddress, $subject, $message);
 
   	echo $toAddress
 

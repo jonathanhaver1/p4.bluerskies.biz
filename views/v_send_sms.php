@@ -1,9 +1,9 @@
 		<h2>Send Text Message</h2>
 
 		<span id = "description">
-			You can send an SMS to a mobile phone number<br>
-			with one of the following carriers
-			if you have <u>activated</u> this service with your carrier<br><br>
+			This service requires activation by the recipient<br>
+			to have the message delivered by the mobile phone carrier.<br>
+			(however, you can still successfully send a message to the carrier without activation)<br>
 		</span>
 
 		<div style = "margin-top: 150px"></span>

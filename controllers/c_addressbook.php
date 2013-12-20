@@ -34,7 +34,7 @@ class addressbook_controller extends base_controller {
 		# Array of fields
 		$submitted = array('first_name', 'last_name', 'emailHome', 'emailWork', 'sip',
 			'phoneNumberHome', 'phoneNumberWork', 'skype',
-			'mobilePhoneNumber', 'mobilePhoneCarrier',
+			'mobilePhoneNumber', 'mobilePhoneCarrier', 'physicalAddress',
 			'interests', 'comments');
 
 		# Loop through fields

@@ -11,6 +11,6 @@ You shave successfully added a post.
 <ul>
 	<li><a href="/todo/add">Add a<br>To Do</a></li>
 	<li><a href="/todo/index_todo">See<br>the ToDo's</a></li>
-	<li><a href="/users/profile">See<br>the Done's</a></li>
+	<li><a href="/todo/index_done">See<br>the Done's</a></li>
 </ul>
 </div>
