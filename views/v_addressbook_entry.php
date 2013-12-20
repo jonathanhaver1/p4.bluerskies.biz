@@ -53,6 +53,9 @@ Below are the details for <?=$contact['first_name']?> <?=$contact['last_name']?>
         Home Phone: <?=$contact['phoneNumberHome']?>&nbsp;
         <a href="tel:<?=$contact['phoneNumberHome']?>" id="button_content">CALL</a><br>
 
+        Skype: <?=$contact['skype']?>&nbsp;
+        <a href="skype:<?=$contact['skype']?>?call" data-role="button" rel="external" id="button_content">Call Skype ID</a><br><br>
+
         Mobile Phone: <?=$contact['mobilePhoneNumber']?><br>
         <a href='/communicate/send_sms/<?=$contact['addressbook_id']?>' id="button_content">SEND SMS</a>&nbsp;
         <a href="tel:<?=$contact['phoneNumberHome']?>" id="button_content">CALL</a><br><br>

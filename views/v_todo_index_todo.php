@@ -69,7 +69,7 @@
         SKYPE CALL<br>
         <a href="skype:<?=$todo['phoneNumberHome']?>?call" data-role="button" rel="external" id="button_content">Call Private Phone</a>
         <a href="skype:<?=$todo['phoneNumberWork']?>?call" data-role="button" rel="external" id="button_content">Call Work Phone</a><br>
-        <a href='/communicate/sendSMS/<?=$todo['address_id']?>' id="button_content">Call Skype ID</a><br><br>
+        <a href="skype:<?=$todo['skype']?>?call" data-role="button" rel="external" id="button_content">Call Skype ID</a><br><br>
 
         ________________________________________<br><br>
 
