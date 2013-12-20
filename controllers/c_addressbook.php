@@ -101,8 +101,16 @@ class addressbook_controller extends base_controller {
 		# Run the query
 		$addressbook = DB::instance(DB_NAME)->select_rows($q);
 
+		# if the addressbook is empty -> notify user
+		if (empty($addressbook)) {
+			$messageEmpty = "You need to add contacts to add TO DOs<br>Just click on '<u>New Entry</u>' in the main menu";
+		} else {
+			$messageEmpty = " ";
+		}
+
 		# Pass data to the View
 		$this->template->content->addressbook = $addressbook;
+		$this->template->content->messageEmpty = $messageEmpty;
 
 		# Render the View
 		echo $this->template;

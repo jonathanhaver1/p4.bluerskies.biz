@@ -144,7 +144,7 @@ class todo_controller extends base_controller {
 
 		# if list is empty display a message
 		if (empty($todos)) {
-			$messageEmpty = "Your list is empty - add TO DOs via the main menu";
+			$messageEmpty = "Your TO DO list is empty<br>You can add TO DOs via the main menu";
 		} else {
 			$messageEmpty = " ";
 		}
@@ -189,7 +189,7 @@ class todo_controller extends base_controller {
 		$todos = DB::instance(DB_NAME)->select_rows($q);
 
 		if (empty($todos)) {
-			$messageEmpty = "Your list is empty - add TO DOs via the main menu";
+			$messageEmpty = "Once you have completed a TO DO,<br>it will appear hear";
 		} else {
 			$messageEmpty = " ";
 		}

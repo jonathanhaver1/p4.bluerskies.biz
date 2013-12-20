@@ -49,7 +49,7 @@
 <div id="includeSideMenu"></div>
 
 
-<footer style="font-size: x-small">Banner Photo © Chrisharvey (
+<footer style="font-size: x-small">Banner Photo © Chrisharvey<br>(
 	<a href="http://www.dreamstime.com/">Dreamstime Stock Photos</a>
 	& <a href="http://www.stockfreeimages.com/">Stock Free Images</a>)
 </footer>

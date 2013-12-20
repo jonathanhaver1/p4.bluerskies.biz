@@ -2,8 +2,8 @@
 
 What would you like to do next?
 
-<div id = "special_features">
-	You shave successfully added a post.
+<div id = "special_features" style = "width: 150px">
+	You shave successfully added a TO DO.
 </div>
 
 <div id="menu_horizontal">

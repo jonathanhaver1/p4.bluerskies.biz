@@ -2,9 +2,13 @@
 
 <br><br><br>
 
-You are signed up.<br><br>
+<span style = "color: blue; font-size: large; font-style: cursive">
 
-Now you have a better way to stay in touch with your contacts.<br><br>
+	You are signed up.<br><br>
+
+	Now you have a better way to stay in touch with your contacts.<br><br>
+	
+</span>
 
 <div id = "special_features">
 

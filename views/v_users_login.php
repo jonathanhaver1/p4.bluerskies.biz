@@ -7,7 +7,7 @@
 
 <br><br><br><br><br>
 
-<form method='POST' id = "form_profile" action='/users/p_login'>
+<form method='POST' id = "form_profile" action='/users/p_login'><br>
 
 	<span style = "color: navy; font-size: small; font-type: bold">Do not leave a field blank</span><br><br>
 
@@ -34,6 +34,5 @@
         <ul>
             <li><a href="/users/signup">Signup</a></li>
             <li><a href="/">Home</a></li>
-            <li><a href="htp://www.google.com">Google</a></li>
         </ul>
 </div>

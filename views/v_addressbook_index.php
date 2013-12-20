@@ -3,10 +3,14 @@
 <div id ="description">
         Below are the contacts in your addressbook.<br>
         <spam style = "color: blue">ADD a TO DO by selecting the person<br>you need to contact.<br>
-            If the individual is not listed,<br>umake an addition via 'New Entry'.</span>
+            If the individual is not listed,<br>add the contact via 'New Entry' in the main menu.</span>
 </div>
 
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+
+<article>
+    <?=$messageEmpty?>
+</article>
 
 
 <?php foreach($addressbook as $contact): ?>

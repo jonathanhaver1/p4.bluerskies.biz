@@ -1,6 +1,8 @@
-<br><br><br><br>
+<br><br><br><br><br>
 
-<div id = "special_features">
+<h2>Success!</h2>
+
+<div id = "special_features" style = "width: 150px">
 	You just added a new address book entry
 </div>
 

@@ -43,7 +43,7 @@
 
 		<div id='banner_photo'>
 			<br>
-			<img src="/css/bluerskies.jpg" alt="Bluer Skies" width="320" height="60"><br>
+			<img src="/css/bluerskies.jpg" alt="Bluer Skies" width="565" height="70"><br>
 		</div>
 
 	<div id ='menu'>

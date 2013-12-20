@@ -1,4 +1,4 @@
-<div id = "special_features" style = "margin-left:200px; margin-top: 130px; width:150px;">
+<div id = "special_features" style = "margin-left:230px; margin-top: 130px; width:150px;">
 
 	Please login to explore all the great things on this site.<br>
 	If you have not yet signed up, go to Sign Up below.
@@ -9,7 +9,9 @@
 
 <form method = 'POST' id = "form_profile" action='/users/p_signup'>
 
-	<span style = "color: navy; font-size: small; font-type: bold">Do not leave a field blank</span><br><br>
+	<span style = "color: navy; font-size: small; font-type: bold"><br>
+		Do not leave a field blank<br>An email address can only be used once
+	</span><br><br>
 
 	First Name<br>
 	<input type = 'text' name = 'first_name'>
@@ -27,7 +29,7 @@
 	<input type = 'password' name = 'password'>
 	<br><br>
 
-	<input type = 'submit' value = 'Sign up'>
+	<input type = 'submit' value = 'Sign up'><br><br>
 
 </form>
 

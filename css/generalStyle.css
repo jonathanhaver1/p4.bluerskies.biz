@@ -46,8 +46,8 @@
 
 			footer {
 				position: absolute;
-				top: 780px;
-				left: 450px;
+				top: 900px;
+				left: 20px;
 			}
 
 			ol {
@@ -78,7 +78,7 @@
 			#banner_photo {
 				position: absolute;
 				top: 100px;
-				left: 45px;
+				left: 25px;
 				margin-bottom: 35px;
 			}
 
