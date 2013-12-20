@@ -31,12 +31,10 @@ class addressbook_controller extends base_controller {
 	public function p_add() {
 
 		# Make sure none of the fields was left blank
-		# Array of fields
 		$submitted = array('first_name', 'last_name', 'emailHome', 'emailWork', 'sip',
 			'phoneNumberHome', 'phoneNumberWork', 'skype',
 			'mobilePhoneNumber', 'mobilePhoneCarrier', 'physicalAddress',
 			'interests', 'comments');
-
 		# Loop through fields
 		$empty_field = false;
 		foreach($submitted as $field) {
@@ -44,14 +42,22 @@ class addressbook_controller extends base_controller {
     		$empty_field = true;
   			}
 		}
-
 		# if a fied has been left blank - alert user
 		if ($empty_field) {
   			$this->template->content = View::instance('v_error_empty_fields');
 			$this->template->title = "Empty Fields";
 			echo $this->template;
 
-		# if all fields have been filled in
+		# if an email address does not validate -> alert user
+		} else if
+			(!(filter_var($_POST['emailHome'], FILTER_VALIDATE_EMAIL)
+				&& filter_var($_POST['emailWork'], FILTER_VALIDATE_EMAIL)
+				&& filter_var($_POST['sip'], FILTER_VALIDATE_EMAIL))) {
+				$this->template->content = View::instance('v_error_incorrect_email');
+				$this->template->title = "Incorrect Email Address";
+				echo $this->template;
+
+		# if those two tests have been passed
 		} else {
 
 			# Associate this friend with this user
@@ -61,11 +67,6 @@ class addressbook_controller extends base_controller {
 			$_POST['created']  = Time::now();
 			$_POST['modified'] = Time::now();
 
-			if (!(filter_var($_POST['emailHome'], FILTER_VALIDATE_EMAIL) && (filter_var($_POST['emailWork'], FILTER_VALIDATE_EMAIL)))) {
-				$this->template->content = View::instance('v_error_incorrect_email');
-				$this->template->title = "Incorrect Email Address";
-				echo $this->template;
-			} else {
 			# Insert
 			# Note we didn't have to sanitize any of the $_POST data because we're using the insert method which does it for us
 			DB::instance(DB_NAME)->insert('addressbook', $_POST);
@@ -74,7 +75,6 @@ class addressbook_controller extends base_controller {
 				$this->template->content = View::instance('v_addressbook_added_successfully');
 				$this->template->title = "Success";
 				echo $this->template;
-			}
 		}
 	}
 
