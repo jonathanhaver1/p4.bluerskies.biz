@@ -49,6 +49,13 @@ class users_controller extends base_controller {
 			$this->template->title = "Empty Fields";
 			echo $this->template;
 
+		# if an email address does not validate -> alert user
+		} else if
+			(!(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))) {
+				$this->template->content = View::instance('v_error_incorrect_email');
+				$this->template->title = "Incorrect Email Address";
+				echo $this->template;
+
 		# if all fields have been filled in
 		} else {
 
